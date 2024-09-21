@@ -20,6 +20,10 @@ const Main = styled.main`
   height: 90vh;
   background: #171616;
   padding: .3rem 8rem;
+  @media Screen and (max-width: 768px) {
+    width: 100%;
+    padding: .3rem 1rem;
+  }
 `;
 
 const Bigger = styled.h1`
@@ -29,7 +33,11 @@ const Bigger = styled.h1`
   text-align: left;
   margin-top: 11rem;
   width: 47%;
-  animation: ${slideIn} 2s ease-in-out;
+
+  @media Screen and (max-width: 768px) {
+    font-size: 1.3rem;
+    width: 100%;
+  }
 `; 
 
 const NormalButton = styled.button`
@@ -44,6 +52,12 @@ const NormalButton = styled.button`
   &:hover {
     background: white;
     color: #DF444E;
+  }
+
+  @media Screen and (max-width: 768px) {
+    width: 7rem;
+    height: 2.4rem;
+    font-size: .6rem;
   }
   `;
 
@@ -60,6 +74,12 @@ const SecondaryButton = styled.button`
     background: white;
     color: #DF444E;
   }
+
+  @media Screen and (max-width: 768px) {
+    width: 8rem;
+    height: 2.4rem;
+    font-size: .6rem;
+  }
   `;
 
 const Description = styled.span`
@@ -69,16 +89,24 @@ const Description = styled.span`
   width: 33%;
   font-weight: 300;
   margin: 1.8rem 0;
+  @media Screen and (max-width: 768px) {
+    width: 70%;
+    text-align: left;
+  }
 `;
 
 const Imagem = styled.img`
   animation: ${slideIn} 2s ease-in-out;
+
+  @media Screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Home = () => {
   return (
     <>
-      <Imagem style={{ width: '100%', zIndex: '999', pointerEvents: 'none', aspectRatio: '2/1', position: 'absolute', right: '0', }}src={ Students } />
+      <Imagem style={{ width: '100%', zIndex: '990', pointerEvents: 'none', aspectRatio: '2/1', position: 'absolute', right: '0', }}src={ Students }></Imagem>
       <Main>
         <Bigger>Seja muito bem vindo !</Bigger>
 

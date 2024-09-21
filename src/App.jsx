@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import './global.css';
 import Logo from "/public/Logo.svg";
 import styled from 'styled-components';
-import { FaChevronDown } from 'react-icons/fa';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { FaChevronDown, FaTimes } from 'react-icons/fa';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Sobre from "/src/components/sobre.jsx";
 import Localizacao from "/src/components/localizacao.jsx";
@@ -65,7 +67,31 @@ export default function App() {
   const Nav = styled.nav`
     @media Screen and (max-width: 550px) {
       flex-direction: column;
+      background: #202020;
+      width: 200px;
+      height: 100vh;
+      position: absolute;
+      z-index: 999;
+      right: 0;
+      top: 0;
+      justify-content: center;
+      align-items: center;
     }`;
+
+  const LoginButton = styled.button`
+    height: 4.2rem;
+    background-color: #DF444E;
+    border: solid 1px transparent;
+    color: #fff;
+    transition: all 400ms ease;
+    cursor: pointer;
+    margin: 1rem 0;
+    &:hover {
+      background: #fff;
+      color: #DF444E;
+      border: solid 1px #DF444E;
+    }
+    `;
   
   const [openDropdown, setOpenDropdown] = useState(null);
 
@@ -76,9 +102,27 @@ export default function App() {
   const handleMouseLeave = () => {
     setOpenDropdown(null);
   };
+
+  const [isOverlayVisible, setIsOverlayVisible] = useState(false);
+
+  // Função para abrir o overlay
+  const handleShowOverlay = () => {
+    setIsOverlayVisible(true);
+  };
+
+  // Função para fechar o overlay
+  const handleHideOverlay = () => {
+    setIsOverlayVisible(false);
+  };
+
+  const login = () => {
+    setIsOverlayVisible(false);
+    toast.success("Usuário logado com sucesso!");
+  }
   
   return (   
     <Router>
+      <ToastContainer />
       <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem 3.2rem', backgroundColor: "#171616", height: '6.5rem'}}>
         <div>
           <img style={{width: '4.7rem', aspectRatio: '1/1'}}src={ Logo } />
@@ -130,9 +174,46 @@ export default function App() {
           </DropdownContainer>
         </Nav>
 
-        <NormalButton>Login</NormalButton>
+        <NormalButton onClick={ handleShowOverlay }>Login</NormalButton>
       </header>
 
+      {isOverlayVisible && (
+      <div style={{position: 'fixed',
+                    top: 0,
+                    left: 0,
+                    width: '100vw',
+                    height: '100vh',
+                    backgroundColor: 'rgba(0, 0, 0, 0.76)',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    zIndex: '999'}}> 
+      
+      <form style={{ display: 'flex',
+                     flexDirection: 'column',
+                     width: '250px',
+                     background: '#fff',
+                     color: '#DF444E',
+                     padding: '1.2rem 2rem',
+                     gap: '.4rem'}}>
+        <span style={{position: 'relative', left: '90%', cursor: 'pointer'}}onClick={ handleHideOverlay }><FaTimes /></span>
+        <img style={{width: '4rem', margin: 'auto', marginBottom: '2rem'}}src={ Logo } />
+        <label>Email</label>
+        <input style={{border: 'solid 1px #DF444E', height: '1.44rem', padding: '.1rem .7rem'}} required>
+        </input>
+        <label>
+        Senha</label>
+        <input type="password" style={{border: 'solid 1px #DF444E' , height: '1.44rem', padding: '.1rem .7rem'}} required>
+        </input>
+        <div style={{display: 'flex', gap: '1rem'}}>
+          <input style={{borderColor: '#DF444E'}} type="checkbox"></input>
+          <span>Lembrar minha senha</span>
+        </div>
+        <LoginButton type="submit" onClick={ login }>Login</LoginButton>
+      </form>
+      </div>
+      )}
+      
       <Routes>
         <Route path="/" element= {<Home />} />
         <Route path="/sobre" element= {<Sobre />} />

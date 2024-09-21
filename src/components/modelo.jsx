@@ -8,6 +8,8 @@ const Main = styled.main`
   justify-content: center;
   align-items: center;
   margin: 3rem auto;
+  height: 100%;
+  min-height: 100vh;
   `;
 
 const BigText = styled.h1`

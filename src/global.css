@@ -5,6 +5,7 @@
 }
 body {
   background: #171616;
+  overflow-x: hidden;
 }
 header span {
   color: white;
