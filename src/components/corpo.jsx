@@ -3,7 +3,8 @@ import Modelo from "/src/components/modelo.jsx";
 
 const Corpo = () => {
   return (
-    <Modelo text="Corpo2"/>
+    <><Modelo text="Corpo Docente" content={null} newcontent={null} showP={true}/>
+    </>
   )
 }
 
