@@ -18,6 +18,29 @@ import Home from "/src/components/home.jsx";
 import Footer from "/src/components/footer.jsx";
 
 export default function App() {
+
+  // MEU FORM
+  const [formData, setFormData] = useState({
+    email: '',
+    senha: '',
+  });
+
+  // Função para atualizar o state quando os inputs mudarem
+  const handleInputChange = (e) => {
+    e.prevenDefault();
+    const { email,value } = e.target;
+    setFormData({
+      ...formData,
+      [email]: value
+    });
+  };
+
+  // Função para manipular o envio do formulário
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    window.alert(formData);
+  };
+
   const DropdownContainer = styled.div`
     position: relative;
     display: inline-block;
@@ -39,7 +62,8 @@ export default function App() {
     display: block;
 
     &:hover {
-      background-color: #f1f1f1;
+      background-color: #DF444E;
+      color: #fff;
     }
   `;
 
@@ -116,10 +140,7 @@ export default function App() {
   };
 
   const login = () => {
-    setIsOverlayVisible(false);
-    toast.success("Usuário logado com sucesso!");
-  }
-  
+    toast.success("Login Efetuado com sucesso");  }
   return (   
     <Router>
       <ToastContainer />
@@ -189,7 +210,7 @@ export default function App() {
                     alignItems: 'center',
                     zIndex: '999'}}> 
       
-      <form style={{ display: 'flex',
+      <form onSubmit={handleSubmit} style={{ display: 'flex',
                      flexDirection: 'column',
                      width: '250px',
                      background: '#fff',
@@ -199,17 +220,19 @@ export default function App() {
         <span style={{position: 'relative', left: '90%', cursor: 'pointer'}}onClick={ handleHideOverlay }><FaTimes /></span>
         <img style={{width: '4rem', margin: 'auto', marginBottom: '2rem'}}src={ Logo } />
         <label>Email</label>
-        <input style={{border: 'solid 1px #DF444E', height: '1.44rem', padding: '.1rem .7rem'}} required>
+        <input type="text" name="email" value={formData.email}
+          onChange={handleInputChange} style={{border: 'solid 1px #DF444E', height: '1.44rem', padding: '.1rem .7rem'}} required>
         </input>
         <label>
         Senha</label>
-        <input type="password" style={{border: 'solid 1px #DF444E' , height: '1.44rem', padding: '.1rem .7rem'}} required>
+        <input name="senha" value={formData.senha}
+          onChange={handleInputChange} type="password" style={{border: 'solid 1px #DF444E' , height: '1.44rem', padding: '.1rem .7rem'}} required>
         </input>
         <div style={{display: 'flex', gap: '1rem'}}>
           <input style={{borderColor: '#DF444E'}} type="checkbox"></input>
           <span>Lembrar minha senha</span>
         </div>
-        <LoginButton type="submit" onClick={ login }>Login</LoginButton>
+        <LoginButton onClick={ login } type="submit">Login</LoginButton>
       </form>
       </div>
       )}
