@@ -3,7 +3,7 @@ import Modelo from "/src/components/modelo.jsx";
 
 const Disciplinas = () => {
   return (
-    <Modelo text="Disciplinas" />
+    <Modelo text="Disciplinas" showDisciplinas={true}/>
   )
 }
 

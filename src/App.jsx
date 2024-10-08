@@ -16,6 +16,7 @@ import Livros from "/src/components/livros.jsx";
 import Cursos from "/src/components/cursos.jsx";
 import Home from "/src/components/home.jsx";
 import Footer from "/src/components/footer.jsx";
+import Eventos from "/src/components/eventos.jsx";
 
 export default function App() {
 
@@ -145,9 +146,9 @@ export default function App() {
     <Router>
       <ToastContainer />
       <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem 3.2rem', backgroundColor: "#171616", height: '6.5rem'}}>
-        <div>
+        <Mylink style={{cursor: 'pointer' }} to="/">
           <img style={{width: '4.7rem', aspectRatio: '1/1'}}src={ Logo } />
-        </div>
+        </Mylink>
   
         <Nav style={{ display: 'flex', gap: '3.3rem' }}>
           {/* Dropdown para Curso */}
@@ -247,6 +248,7 @@ export default function App() {
         <Route path="/materiais/video-aulas" element= {<Aulas />} />
         <Route path="/materiais/cursos" element= {<Cursos />} />
         <Route path="/materiais/livros" element= {<Livros />} />
+        <Route path="/mais/eventos" element= {<Eventos />} />
       </Routes>
 
       <Footer />

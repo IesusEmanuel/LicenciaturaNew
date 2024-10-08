@@ -37,16 +37,21 @@ const Curriculo = styled.a`
 `;
 
 
-const Professor = ({ nivel, nome, disciplinas }) => {
+const Professor = ({ nivel, nome, disciplinas, coord }) => {
   return (
+    <>
     <Container>
       <Level>{ nivel }</Level>
-      <Nome>{ nome }</Nome>
+      <div style={{display: 'flex', alignItems: 'flex-start', gap: '1rem'}}>
+        <Nome>{ nome }</Nome>
+        {coord && <div style={{display: 'flex', alignItems: 'center', height: '.2rem', padding: '.8rem', color: '#fff', backgroundColor: '#DF444E'}}>Coordenador</div>}
+      </div>
       {disciplinas.map((disciplina, index) => (
         <Disc key={index}>{disciplina}</Disc>
       ))}
       <Curriculo>Ver</Curriculo>
     </Container>
+    </>
   );
 }
 
