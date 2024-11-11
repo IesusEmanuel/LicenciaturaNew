@@ -9,4 +9,12 @@ body {
 }
 header span {
   color: white;
+}.mobile {
+  display: none;
+}
+
+@media Screen and (max-width: 1080px) {
+  .mobile {
+    display: flex;
+  }
 }

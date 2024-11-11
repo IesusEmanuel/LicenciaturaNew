@@ -1,5 +1,22 @@
 import React from "react";
 import Modelo from "/src/components/modelo.jsx";
+import styled from "styled-components";
+
+const Button = styled.button`
+ width: 37%;
+ height: 4.4rem;
+ background-color: #DF444E;
+ border: none;
+ color: #fff;
+ transition: all 400ms ease;
+ cursor: pointer;
+ &:hover {
+   background: white;
+   color: #DF444E;
+ }
+ @media Screen and (max-width: 1080px){
+  width: 80%;
+ }`;
 
 const Localizacao = () => {
   const seeMap = () => {
@@ -28,16 +45,8 @@ window.open("https://www.google.com.br/maps/place/Pr%C3%A9dio+III+IFMG+SJE/@-18.
       A economia do município é baseada principalmente na agropecuária, com produção de milho, feijão, leite e derivados, além de gado de corte. São João Evangelista sempre contou com indivíduos empreendedores que contribuíram significativamente para o desenvolvimento do município e para a construção de sua história."/>
 
     <div style={{display: 'flex', justifyContent:'center', width: '100%', margin: '4rem auto'}}>
-      <button onClick={ seeMap } style={{width: '37%',display: 'flex', justifyContent:'center', alignItems:'center',
-         height: '4.4rem',
-         backgroundColor: '#DF444E',
-         border: 'none',
-         color: '#fff',
-         transition: 'all 400ms ease',
-         cursor: 'pointer',
-         textTransform: 'uppercase'}}>Ver no mapa</button>
+      <Button onClick={ seeMap }>Ver no mapa</Button>
       </div>
-
     </>
   )
 }

@@ -1,5 +1,31 @@
 import React from "react";
 import Modelo from "/src/components/modelo.jsx";
+import styled from "styled-components";
+
+const Frame = styled.iframe`
+  width: 40%;
+  height: 400px;
+  aspect-ratio: 1/1;
+  @media Screen and (max-width: 1080px){
+    width: 80%;
+    height: 300px;
+  }`;
+
+const Button = styled.button`
+ width: 37%;
+ height: 4.4rem;
+ background-color: #DF444E;
+ border: none;
+ color: #fff;
+ transition: all 400ms ease;
+ cursor: pointer;
+ &:hover {
+   background: white;
+   color: #DF444E;
+ }
+ @media Screen and (max-width: 1080px){
+  width: 80%;
+ }`;
 
 const Sobre = () => {
   return (
@@ -21,22 +47,13 @@ const Sobre = () => {
       </ul>
 
       <div style={{display: 'flex', justifyContent:'center', width: '100%', margin: '4rem auto'}}>
-        <iframe src="https://www.youtube.com/embed/cX-OLTTpc8U" frameborder="0" width="37%" height="400" allowfullscreen="allowfullscreen" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+        <Frame src="https://www.youtube.com/embed/cX-OLTTpc8U" frameborder="0" allowfullscreen="allowfullscreen" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></Frame>
 
         </div>
 
       <div style={{display: 'flex', justifyContent:'center', width: '100%', margin: '4rem auto'}}>
-      <button style={{width: '37%',display: 'flex', justifyContent:'center', alignItems:'center',
-         height: '4.4rem',
-         backgroundColor: '#DF444E',
-         border: 'none',
-         color: '#fff',
-         transition: 'all 400ms ease',
-         cursor: 'pointer'}}>Ver mais sobre o curso</button>
+      <Button>Ver mais sobre o curso</Button>
       </div>
-
-      
-      
     </>
   )
 }

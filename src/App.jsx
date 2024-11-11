@@ -4,7 +4,7 @@ import Logo from "/public/Logo.svg";
 import styled from 'styled-components';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { FaChevronDown, FaTimes } from 'react-icons/fa';
+import { FaChevronDown, FaTimes, FaBars } from 'react-icons/fa';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Sobre from "/src/components/sobre.jsx";
 import Localizacao from "/src/components/localizacao.jsx";
@@ -90,17 +90,22 @@ export default function App() {
     }`;
 
   const Nav = styled.nav`
-    @media Screen and (max-width: 550px) {
+  transition: all 500ms ease;
+    @media Screen and (max-width: 1080px) {
       flex-direction: column;
       background: #202020;
-      width: 200px;
+      width: 250px;
       height: 100vh;
-      position: absolute;
+      position: fixed;
       z-index: 999;
-      right: 0;
+      right: 0px;
       top: 0;
       justify-content: center;
       align-items: center;
+    }
+    
+    @media Screen and (max-width: 1920px){
+      display: flex;
     }`;
 
   const LoginButton = styled.button`
@@ -117,6 +122,14 @@ export default function App() {
       border: solid 1px #DF444E;
     }
     `;
+
+  const NavButtonClose = styled.span`
+    display: none;
+    cursor: pointer;
+    @media Screen and (max-width: 1080px) {
+      display: flex;
+    }
+  `;
   
   const [openDropdown, setOpenDropdown] = useState(null);
 
@@ -129,7 +142,8 @@ export default function App() {
   };
 
   const [isOverlayVisible, setIsOverlayVisible] = useState(false);
-
+  const [isNavOnScreen, setIsNavOnScreen] = useState(false);
+  
   // Função para abrir o overlay
   const handleShowOverlay = () => {
     setIsOverlayVisible(true);
@@ -140,8 +154,19 @@ export default function App() {
     setIsOverlayVisible(false);
   };
 
+  // Função para mostrar a nav 
+  const showNavBar = () => {
+    setIsNavOnScreen(true);
+  }
+
+  const hideNavBar = () => {
+    setIsNavOnScreen(false);
+  }
+  
   const login = () => {
-    toast.success("Login Efetuado com sucesso");  }
+    toast.success("Login Efetuado com sucesso");  
+    handleHideOverlay();
+  };
   return (   
     <Router>
       <ToastContainer />
@@ -149,8 +174,11 @@ export default function App() {
         <Mylink style={{cursor: 'pointer' }} to="/">
           <img style={{width: '4.7rem', aspectRatio: '1/1'}}src={ Logo } />
         </Mylink>
-  
-        <Nav style={{ display: 'flex', gap: '3.3rem' }}>
+
+        <NavButtonClose><FaBars size={22} onClick={ showNavBar } /></NavButtonClose>
+        {isNavOnScreen && (
+        <Nav style={{ display: 'flex', gap: '3.3rem', justifyContent: 'center', alignItems: 'center'}}>
+          <NavButtonClose><FaTimes style={{ position: 'absolute', top: '7.4rem', right: '1.7rem'}}size={22} onClick={ hideNavBar } /></NavButtonClose>
           {/* Dropdown para Curso */}
           <DropdownContainer
             onMouseEnter={() => handleMouseEnter('curso')}
@@ -194,9 +222,10 @@ export default function App() {
               <DropdownItem to="/mais/eventos">Eventos</DropdownItem>
             </DropdownContent>
           </DropdownContainer>
-        </Nav>
 
-        <NormalButton onClick={ handleShowOverlay }>Login</NormalButton>
+          <NormalButton onClick={ handleShowOverlay }>Login</NormalButton>
+        </Nav>
+      )}
       </header>
 
       {isOverlayVisible && (

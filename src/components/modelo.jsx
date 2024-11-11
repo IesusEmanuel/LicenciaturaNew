@@ -4,6 +4,10 @@ import Professor from './incorporates/professor.jsx';
 import Horario from "./incorporates/horario.jsx";
 import Disciplina from "./incorporates/disciplina.jsx";
 import Evento from "./incorporates/evento.jsx";
+import LivroIndividual from "./incorporates/livroIndividual.jsx";
+import AulaIndividual from "./incorporates/aulasIndividuais.jsx";
+import FirstBook from "/public/livro1.png";
+import SecondBook from "/public/livro2.png";
 
 const Main = styled.main` 
   display: flex;
@@ -29,9 +33,44 @@ const Content = styled.span`
   text-align: justify;
   line-height: 3.2rem;
   font-weight: 200;
+
+  @media Screen and (max-width: 1080px) {
+    line-height: 2.08rem;
+    width: 79%;
+    font-weight: 300;
+  }
 `;
 
-const Modelo = ({ text, content, newcontent, showP, showHorarios, showDisciplinas, showEvents }) => {
+const ContainerLivros = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 67%;
+  gap: 2.1rem;
+  justify-content: left;
+  margin-top: -3.8rem;
+  @media Screen and (max-width: 1080px){
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }`;
+
+const ContainerAulas = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 67%;
+  gap: 4.1rem;
+  justify-content: left;
+  margin-top: -3.8rem;
+@media Screen and (max-width: 1080px){
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}`;
+
+
+const Modelo = ({ text, content, newcontent, showP, showHorarios, showDisciplinas, showEvents, showBooks, showAulas }) => {
   return (
     <Main>
       <BigText>{ text }</BigText>
@@ -87,6 +126,26 @@ const Modelo = ({ text, content, newcontent, showP, showHorarios, showDisciplina
       { showEvents && <div style={{display: 'flex', flexDirection:'row', flexWrap: 'wrap', width:'67%', gap: '2.1rem', justifyContent: 'left', marginTop: '.8rem'}}>
         <Evento />
       </div>}
+      { /* LIVROS */ }
+      <ContainerLivros>
+        {showBooks && <LivroIndividual image={ FirstBook } autor="James Stewart" titulo="Cálculo I"/>}
+        {showBooks && <LivroIndividual image={ FirstBook } autor="James Stewart" titulo="Cálculo I"/>}
+        {showBooks && <LivroIndividual image={ FirstBook } autor="James Stewart" titulo="Cálculo I"/>}
+        {showBooks && <LivroIndividual image={ SecondBook } autor="Politécnicos" titulo="Resumão de Derivadas"/>}
+        {showBooks && <LivroIndividual image={ FirstBook } autor="James Stewart" titulo="Cálculo I"/>}
+        {showBooks && <LivroIndividual image={ FirstBook } autor="James Stewart" titulo="Cálculo I"/>}
+        {showBooks && <LivroIndividual image={ FirstBook } autor="James Stewart" titulo="Cálculo I"/>}
+        {showBooks && <LivroIndividual image={ FirstBook } autor="James Stewart" titulo="Cálculo I"/>}
+      </ContainerLivros>
+      {/* AULAS */ }
+      <ContainerAulas>
+        {showAulas && <AulaIndividual image="https://img.youtube.com/vi/cWBEMN75IMc/sddefault.jpg" video="Derivada - Definição e Cálculo - Cálculo 1 (#16)" canal="Equaciona com Paulo Pereira"/>}
+        {showAulas && <AulaIndividual image="https://img.youtube.com/vi/8NNA-8rimNs/maxresdefault.jpg" video="EXPRESSÕES ALGÉBRICAS | RÁPIDO e FÁCIL" canal="Dicasdemat Sandro Curió"/>}
+        {showAulas && <AulaIndividual image="https://img.youtube.com/vi/cWBEMN75IMc/sddefault.jpg" video="Derivada - Definição e Cálculo - Cálculo 1 (#16)" canal="Equaciona com Paulo Pereira"/>}
+        {showAulas && <AulaIndividual image="https://img.youtube.com/vi/cWBEMN75IMc/sddefault.jpg" video="Derivada - Definição e Cálculo - Cálculo 1 (#16)" canal="Equaciona com Paulo Pereira"/>}
+        {showAulas && <AulaIndividual image="https://img.youtube.com/vi/cWBEMN75IMc/sddefault.jpg" video="Derivada - Definição e Cálculo - Cálculo 1 (#16)" canal="Equaciona com Paulo Pereira"/>}
+        
+      </ContainerAulas>
     </Main>
   )
 }
