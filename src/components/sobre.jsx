@@ -27,6 +27,9 @@ const Button = styled.button`
   width: 80%;
  }`;
 
+const irParaoCurso = () => {
+  window.open("https://www.sje.ifmg.edu.br/portal/index.php/graduacao/matematica-licenciatura");
+}
 const Sobre = () => {
   return (
     <>
@@ -52,7 +55,7 @@ const Sobre = () => {
         </div>
 
       <div style={{display: 'flex', justifyContent:'center', width: '100%', margin: '4rem auto'}}>
-      <Button>Ver mais sobre o curso</Button>
+      <Button onClick={ irParaoCurso }>Ver mais sobre o curso</Button>
       </div>
     </>
   )

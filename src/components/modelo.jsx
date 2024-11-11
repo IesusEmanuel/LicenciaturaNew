@@ -8,6 +8,7 @@ import LivroIndividual from "./incorporates/livroIndividual.jsx";
 import AulaIndividual from "./incorporates/aulasIndividuais.jsx";
 import Curso from "./incorporates/cursoIndividual.jsx";
 import FormContato from "./incorporates/formContato.jsx";
+import Noticia from "./incorporates/noticiaIndividuais.jsx";
 
 import FirstBook from "/public/livro1.png";
 import SecondBook from "/public/livro2.png";
@@ -105,7 +106,16 @@ const ContainerContato = styled.div`
   gap: 4.1rem;
 `;
 
-const Modelo = ({ text, content, newcontent, showP, showHorarios, showDisciplinas, showEvents, showBooks, showAulas, showCursos, showContato }) => {
+const ContainerNoticias = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 67%;
+  gap: 4.1rem;
+`;
+
+const Modelo = ({ text, content, newcontent, showP, showHorarios, showDisciplinas, showEvents, showBooks, showAulas, showCursos, showContato, showNoticias}) => {
   return (
     <Main>
       <BigText>{ text }</BigText>
@@ -163,18 +173,16 @@ const Modelo = ({ text, content, newcontent, showP, showHorarios, showDisciplina
       </div>}
       { /* LIVROS */ }
       <ContainerLivros>
-        {showBooks && <LivroIndividual image={ FirstBook } autor="James Stewart" titulo="Cálculo I"/>}
-        {showBooks && <LivroIndividual image={ FirstBook } autor="James Stewart" titulo="Cálculo I"/>}
-        {showBooks && <LivroIndividual image={ FirstBook } autor="James Stewart" titulo="Cálculo I"/>}
-        {showBooks && <LivroIndividual image={ SecondBook } autor="Politécnicos" titulo="Resumão de Derivadas"/>}
-        {showBooks && <LivroIndividual image={ FirstBook } autor="James Stewart" titulo="Cálculo I"/>}
-        {showBooks && <LivroIndividual image={ FirstBook } autor="James Stewart" titulo="Cálculo I"/>}
-        {showBooks && <LivroIndividual image={ FirstBook } autor="James Stewart" titulo="Cálculo I"/>}
-        {showBooks && <LivroIndividual image={ FirstBook } autor="James Stewart" titulo="Cálculo I"/>}
+        {showBooks && <LivroIndividual link="https://www.infolivros.org/pdfview/9620-calculo-diferencial-e-integral-marcia-federson-e-gabriela-planas/" link2="https://dl.dropboxusercontent.com/sh/d6plg2q4oydvpcs/AAD7fJ0rwbqU9wby5Am99bXga/Archivos%20Infolivros%20POR/Temas%20%28Continuaci%C3%B3n%29/Calculo%20Integral/05.%20C%C3%A1lculo%20Diferencial%20e%20Integral%20autor%20M%C3%A1rcia%20Federson%20e%20Gabriela%20Planas.pdf?dl=1" image="https://www.publicdomainpictures.net/pictures/280000/velka/not-found-image-15383864787lu.jpg" autor="Márcia Federson e Gabriela Planas" titulo="Cálculo Diferencial e Integral"/>}
+        {showBooks && <LivroIndividual link="https://drive.google.com/file/d/1mOAKH8uw2pRFwtqsXNDK7xcd3chDq5oD/view" link2="https://drive.usercontent.google.com/uc?id=1mOAKH8uw2pRFwtqsXNDK7xcd3chDq5oD&export=download" image={ FirstBook } autor="James Stewart" titulo="Cálculo I" />}
+        {showBooks && <LivroIndividual link="https://drive.google.com/file/d/1mOAKH8uw2pRFwtqsXNDK7xcd3chDq5oD/view" link2="https://drive.usercontent.google.com/uc?id=1mOAKH8uw2pRFwtqsXNDK7xcd3chDq5oD&export=download" image={ FirstBook } autor="James Stewart" titulo="Cálculo I" />}
+        {showBooks && <LivroIndividual link="https://drive.google.com/file/d/1mOAKH8uw2pRFwtqsXNDK7xcd3chDq5oD/view" link2="https://drive.usercontent.google.com/uc?id=1mOAKH8uw2pRFwtqsXNDK7xcd3chDq5oD&export=download" image={ FirstBook } autor="James Stewart" titulo="Cálculo I" />}
+        {showBooks && <LivroIndividual link="https://drive.google.com/file/d/1mOAKH8uw2pRFwtqsXNDK7xcd3chDq5oD/view" link2="https://drive.usercontent.google.com/uc?id=1mOAKH8uw2pRFwtqsXNDK7xcd3chDq5oD&export=download" image={ FirstBook } autor="James Stewart" titulo="Cálculo I" />}
+        {showBooks && <LivroIndividual link="https://drive.google.com/file/d/1mOAKH8uw2pRFwtqsXNDK7xcd3chDq5oD/view" link2="https://drive.usercontent.google.com/uc?id=1mOAKH8uw2pRFwtqsXNDK7xcd3chDq5oD&export=download" image={ FirstBook } autor="James Stewart" titulo="Cálculo I" />}
       </ContainerLivros>
       {/* AULAS */ }
       <ContainerAulas>
-        {showAulas && <AulaIndividual image="https://img.youtube.com/vi/cWBEMN75IMc/sddefault.jpg" video="Derivada - Definição e Cálculo - Cálculo 1 (#16)" canal="Equaciona com Paulo Pereira" link="https://www.youtube.com/watch?v=blRQ8GUcNJ0"/>}
+        {showAulas && <AulaIndividual image="https://img.youtube.com/vi/cWBEMN75IMc/sddefault.jpg" video="Derivada - Definição e Cálculo - Cálculo 1 (#16)" canal="Equaciona com Paulo Pereira" link="https://www.youtube.com/watch?v=cWBEMN75IMc&pp=ygU0RGVyaXZhZGEgLSBEZWZpbmnDp8OjbyBlIEPDoWxjdWxvIC0gQ8OhbGN1bG8gMSAoIzE2KQ%3D%3D"/>}
         {showAulas && <AulaIndividual image="https://img.youtube.com/vi/8NNA-8rimNs/maxresdefault.jpg" video="EXPRESSÕES ALGÉBRICAS | RÁPIDO e FÁCIL" canal="Dicasdemat Sandro Curió"/>}
         {showAulas && <AulaIndividual image="https://img.youtube.com/vi/cWBEMN75IMc/sddefault.jpg" video="Derivada - Definição e Cálculo - Cálculo 1 (#16)" canal="Equaciona com Paulo Pereira"/>}
         {showAulas && <AulaIndividual image="https://img.youtube.com/vi/cWBEMN75IMc/sddefault.jpg" video="Derivada - Definição e Cálculo - Cálculo 1 (#16)" canal="Equaciona com Paulo Pereira"/>}
@@ -195,8 +203,12 @@ const Modelo = ({ text, content, newcontent, showP, showHorarios, showDisciplina
       </ContainerCursos>
       {/* CONTATO */}
       <ContainerContato>
-        <FormContato />
+        { showContato && <FormContato />}
       </ContainerContato>
+      {/* NOTICIAS */}
+      <ContainerNoticias>
+        { showNoticias && <Noticia />}
+      </ContainerNoticias>
     </Main>
   )
 }

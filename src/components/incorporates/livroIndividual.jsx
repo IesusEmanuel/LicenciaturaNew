@@ -47,7 +47,15 @@ const ButtonsContainer = styled.div`
     gap: .5rem;
   }`;
 
-const LivroIndividual = ({image, titulo, autor}) => {
+const lerLivro = (link) => {
+  window.open(link, "_blank");
+}
+
+const baixarLivro = (link2) => {
+  window.open(link2, "_self");
+}
+
+const LivroIndividual = ({image, titulo, autor, link, link2}) => {
   return (
     <div style={{display: 'flex', gap: '1rem'}}>
       <div style={{display: 'block'}}>
@@ -61,8 +69,8 @@ const LivroIndividual = ({image, titulo, autor}) => {
         </div>
 
         <ButtonsContainer>
-          <Button color={'white'} background={'#DF444E'} colorBorder={'transparent'} colorHover={'#DF444E'}>Ler</Button>
-          <Button color={'white'} background={'transparent'} colorBorder={'white'} colorHover={'#DF444E'}><FaDownload size={16}/></Button>
+          <Button onClick={() => lerLivro(link)} color={'white'} background={'#DF444E'} colorBorder={'transparent'} colorHover={'#DF444E'}>Ler</Button>
+          <Button onClick={() => baixarLivro(link2)} color={'white'} background={'transparent'} colorBorder={'white'} colorHover={'#DF444E'}><FaDownload size={16}/></Button>
         </ButtonsContainer>
       </div>
     </div>
