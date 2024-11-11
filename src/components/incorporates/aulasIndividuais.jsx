@@ -36,14 +36,22 @@ const Button = styled.button`
   }
   @media Screen and (max-width: 1080px){
     padding: .4rem;
-    width: 5rem;
+    width: 10rem;
     font-weight: 400;
   }
 `;
 
+const AulaContainer = styled.div`
+  display: flex;
+  gap: 1rem;
+  @media Screen and (max-width: 1080px){
+    gap: 2rem;
+    flex-direction: column;
+  }`;
+
 const AulaIndividual = ({image, video, canal}) => {
   return (
-    <div style={{display: 'flex', gap: '1rem'}}>
+    <AulaContainer>
       <div style={{display: 'block'}}>
         <Myimage src={ image }></Myimage>
       </div>
@@ -55,7 +63,7 @@ const AulaIndividual = ({image, video, canal}) => {
           <Button>Assistir <FaYoutube style={{marginLeft: ".7rem"}} size={22}/></Button>
         </div>
       </div>
-    </div>
+    </AulaContainer>
   )
 }
 

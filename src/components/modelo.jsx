@@ -46,7 +46,7 @@ const ContainerLivros = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   width: 67%;
-  gap: 2.1rem;
+  gap: 1.1rem;
   justify-content: left;
   margin-top: -3.8rem;
   @media Screen and (max-width: 1080px){

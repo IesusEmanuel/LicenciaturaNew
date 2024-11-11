@@ -20,6 +20,7 @@ const Main = styled.main`
   height: 90vh;
   background: #171616;
   padding: .3rem 8rem;
+  z-index: 2;
   @media Screen and (max-width: 768px) {
     width: 100%;
     padding: .3rem 1rem;
@@ -33,9 +34,10 @@ const Bigger = styled.h1`
   text-align: left;
   margin-top: 11rem;
   width: 47%;
-
+  z-index: 2;
   @media Screen and (max-width: 768px) {
-    font-size: 1.3rem;
+    margin-top: 2rem;
+    font-size: 3.3rem;
     width: 100%;
   }
 `; 
@@ -49,6 +51,7 @@ const NormalButton = styled.button`
   border: solid 1px white;
   cursor: pointer;
   transition: all 400ms ease;
+  z-index: 2;
   &:hover {
     background: white;
     color: #DF444E;
@@ -57,6 +60,7 @@ const NormalButton = styled.button`
   @media Screen and (max-width: 768px) {
     width: 7rem;
     height: 2.4rem;
+    border-radius: .1rem;
     font-size: .6rem;
   }
   `;
@@ -70,15 +74,18 @@ const SecondaryButton = styled.button`
   cursor: pointer;
   border: none;
   transition: all 400ms ease;
+  z-index: 2;
   &:hover {
     background: white;
     color: #DF444E;
   }
 
   @media Screen and (max-width: 768px) {
-    width: 8rem;
+    width: 11rem;
     height: 2.4rem;
+    border-radius: .1rem;
     font-size: .6rem;
+    z-index: 2;
   }
   `;
 
@@ -89,6 +96,7 @@ const Description = styled.span`
   width: 33%;
   font-weight: 300;
   margin: 1.8rem 0;
+  z-index: 2;
   @media Screen and (max-width: 768px) {
     width: 70%;
     text-align: left;
@@ -97,16 +105,26 @@ const Description = styled.span`
 
 const Imagem = styled.img`
   animation: ${slideIn} 2s ease-in-out;
-
-  @media Screen and (max-width: 768px) {
-    display: none;
+  width: 80%;
+  z-index: 990;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  @media Screen and (max-width: 1080px) {
+    animation: none;
+    width: 400%;
+    height: auto;
+    opacity: 0.2;
+    right: -10%;
+    bottom: 0;
+    z-index: 1;
   }
 `;
 
 const Home = () => {
   return (
     <>
-      <Imagem style={{ width: '100%', zIndex: '990', pointerEvents: 'none', aspectRatio: '2/1', position: 'absolute', right: '0', }}src={ Students }></Imagem>
+      <Imagem src={ Students }></Imagem>
       <Main>
         <Bigger>Seja muito bem vindo !</Bigger>
 

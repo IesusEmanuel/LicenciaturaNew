@@ -14,7 +14,10 @@ const Autor = styled.span`
 const Myimage = styled.img`
   width: 14rem;
   height: auto;
-  aspect-ratio: 1/1;`;
+  aspect-ratio: 1/1;
+  @media Screen and (max-width: 1080px){
+  width: 10rem;
+  `;
 
 const Button = styled.button`
   padding: 1rem;

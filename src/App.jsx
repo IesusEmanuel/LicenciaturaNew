@@ -142,7 +142,7 @@ export default function App() {
   };
 
   const [isOverlayVisible, setIsOverlayVisible] = useState(false);
-  const [isNavOnScreen, setIsNavOnScreen] = useState(false);
+  const [isNavOnScreen, setIsNavOnScreen] = useState(true);
   
   // Função para abrir o overlay
   const handleShowOverlay = () => {
