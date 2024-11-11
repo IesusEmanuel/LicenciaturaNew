@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
-  padding: .3rem 1.3rem;
+  padding: 0rem 1.3rem;
   width: 19rem;
-  height: 21rem;
+  height: 23rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -12,6 +12,9 @@ const Container = styled.div`
   align-items: left;
   background-color: #fff;
   border-radius: 1rem;
+  @media Screen and (max-width: 1080px) {
+    width: 87%;
+  }
   `;
 
 const Periodo = styled.span`
@@ -62,7 +65,7 @@ const Disciplina = ({ periodo, materia, desc}) => {
       <Periodo>{ periodo }</Periodo>
       <Materia>{ materia }</Materia>
       <Desc>{ desc }</Desc>
-      <div style={{display: 'flex', alignItems: 'center', gap: '1.1rem'}}>
+      <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1.1rem'}}>
         <Redbutton>Requisitos</Redbutton>
         <Normalbutton>Ver todas</Normalbutton>
       </div>

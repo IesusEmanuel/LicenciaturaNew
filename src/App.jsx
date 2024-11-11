@@ -17,6 +17,7 @@ import Cursos from "/src/components/cursos.jsx";
 import Home from "/src/components/home.jsx";
 import Footer from "/src/components/footer.jsx";
 import Eventos from "/src/components/eventos.jsx";
+import Contato from "/src/components/contato.jsx";
 
 export default function App() {
 
@@ -278,6 +279,7 @@ export default function App() {
         <Route path="/materiais/cursos" element= {<Cursos />} />
         <Route path="/materiais/livros" element= {<Livros />} />
         <Route path="/mais/eventos" element= {<Eventos />} />
+        <Route path="/mais/contato" element= {<Contato />} />
       </Routes>
 
       <Footer />

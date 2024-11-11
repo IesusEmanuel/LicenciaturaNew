@@ -6,8 +6,13 @@ import Disciplina from "./incorporates/disciplina.jsx";
 import Evento from "./incorporates/evento.jsx";
 import LivroIndividual from "./incorporates/livroIndividual.jsx";
 import AulaIndividual from "./incorporates/aulasIndividuais.jsx";
+import Curso from "./incorporates/cursoIndividual.jsx";
+import FormContato from "./incorporates/formContato.jsx";
+
 import FirstBook from "/public/livro1.png";
 import SecondBook from "/public/livro2.png";
+import UdemyLogo from "/public/udemyLogo.png";
+import BradescoLogo from "/public/bradescologo.svg";
 
 const Main = styled.main` 
   display: flex;
@@ -15,15 +20,21 @@ const Main = styled.main`
   gap: 2.2rem;
   justify-content: center;
   align-items: center;
-  margin: 3rem auto;
   height: 100%;
   min-height: 100vh;
+  @media Screen and (max-width: 1080px) {
+    width: 96%;
+    margin: 0 auto;
+  }
   `;
 
 const BigText = styled.h1`
   color: white;
   font-size: 2.7rem;
   text-transform: uppercase;
+  @media Screen and (max-width: 1080px) {
+    font-size: 1.6rem;
+  }
 `;
 
 const Content = styled.span`
@@ -71,18 +82,34 @@ const ContainerAulas = styled.div`
 
 const ContainerCursos = styled.div`
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   width: 67%;
   gap: 4.1rem;
-  justify-content: left;
-  margin-top: -3.8rem;`;
+  margin-top: -3.8rem;
+  `;
 
-const Modelo = ({ text, content, newcontent, showP, showHorarios, showDisciplinas, showEvents, showBooks, showAulas, showCursos }) => {
+const Hr = styled.hr`
+  width: 67%;
+  @media Screen and (max-width: 1080px) {
+    width: 79%;
+  }`;
+
+const ContainerContato = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 67%;
+  gap: 4.1rem;
+`;
+
+const Modelo = ({ text, content, newcontent, showP, showHorarios, showDisciplinas, showEvents, showBooks, showAulas, showCursos, showContato }) => {
   return (
     <Main>
       <BigText>{ text }</BigText>
-      <hr style={{width: '67%'}} />
+      <Hr />
       <Content>{ content }</Content>
       <Content>{ newcontent }</Content>
       {/* PROFESSORES */}
@@ -122,7 +149,7 @@ const Modelo = ({ text, content, newcontent, showP, showHorarios, showDisciplina
       { showHorarios && <Horario myroute="https://www.google.com.br/" hor="Horarios LM211"/> }
       </div>
       {/* DISCIPLINAS */}
-       <div style={{display: 'flex', flexDirection:'row', flexWrap: 'wrap', width:'67%', gap: '2.1rem', justifyContent: 'left', marginTop: '.8rem'}}>
+       <div style={{display: 'flex', flexDirection:'row', flexWrap: 'wrap', width:'67%', gap: '2.1rem', justifyContent: 'left'}}>
          {showDisciplinas && <Disciplina periodo="1º Período" materia="Álgebra Linear II" desc="A disciplina de Álgebra na Educação Básica II tem como objetivo desenvolver o raciocínio lógico e a capacidade de resolver problemas através da linguagem matemática."/>}
          {showDisciplinas && <Disciplina periodo="1º Período" materia="Álgebra Linear II" desc="A disciplina de Álgebra na Educação Básica II tem como objetivo desenvolver o raciocínio lógico e a capacidade de resolver problemas através da linguagem matemática."/>}
          {showDisciplinas && <Disciplina periodo="1º Período" materia="Álgebra Linear II" desc="A disciplina de Álgebra na Educação Básica II tem como objetivo desenvolver o raciocínio lógico e a capacidade de resolver problemas através da linguagem matemática."/>}
@@ -158,17 +185,18 @@ const Modelo = ({ text, content, newcontent, showP, showHorarios, showDisciplina
       <ContainerCursos>
       { showCursos && <span style={{color: 'white', lineHeight: '2.7rem', fontWeight: '300'}}>Os cursos voltados para a Licenciatura em Matemática desempenham um papel essencial no desenvolvimento de futuros professores, capacitando-os para ensinar conteúdos matemáticos com clareza e eficiência na educação básica. A formação contínua através de cursos oferece ferramentas atualizadas, metodologias de ensino inovadoras e habilidades pedagógicas indispensáveis para lidar com os desafios da sala de aula.
       Estes cursos proporcionam uma base sólida em conceitos matemáticos e técnicas pedagógicas, permitindo que os licenciandos se tornem professores críticos e reflexivos. Além disso, eles ajudam a conectar a teoria matemática com sua aplicação prática, o que é vital para ensinar de forma eficaz. Outro ponto importante é o desenvolvimento de estratégias para tornar o ensino da matemática mais acessível e interessante para os alunos.</span>}
-        { showCursos && <div>
-          {/* PASSAR ISSO PRA FORA, DENTRO DE UM INCORPORATES */}
-          <div style={{display: 'flex', justifyContent: 'center', alignItems:'center', gap: '1rem'}}>
-            <span>Álgebra</span>
-            <button>Assistir</button>
-            <img src="/public/udemyLogo.png">
-            </img>
-            <span>Gratuito</span>
-          </div>
-        </div>}
+        { showCursos && <Curso course_name="Álgebra" image={ UdemyLogo } price="Gratuito"/>}
+        { showCursos && <Curso course_name="Álgebra" image={ UdemyLogo } price="Pago"/>}
+        { showCursos && <Curso course_name="Álgebra" image={ UdemyLogo } price="Gratuito"/>}
+        { showCursos && <Curso course_name="Álgebra" image={ BradescoLogo } price="Gratuito"/>}
+        { showCursos && <Curso course_name="Álgebra" image={ BradescoLogo } price="Gratuito"/>}
+        { showCursos && <Curso course_name="Álgebra" image={ UdemyLogo } price="Pago"/>}
+        { showCursos && <Curso course_name="Álgebra" image={ UdemyLogo } price="Pago"/>}
       </ContainerCursos>
+      {/* CONTATO */}
+      <ContainerContato>
+        <FormContato />
+      </ContainerContato>
     </Main>
   )
 }
