@@ -3,7 +3,7 @@ import Modelo from "/src/components/modelo.jsx";
 
 const Cursos = () => {
   return (
-    <Modelo text="Cursos" />
+    <Modelo text="Cursos" showCursos={true}/>
   )
 }
 

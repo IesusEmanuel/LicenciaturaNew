@@ -49,7 +49,11 @@ const AulaContainer = styled.div`
     flex-direction: column;
   }`;
 
-const AulaIndividual = ({image, video, canal}) => {
+const verVideo = (link) => {
+  window.open(link, "_blank");
+}
+
+const AulaIndividual = ({image, video, canal, link}) => {
   return (
     <AulaContainer>
       <div style={{display: 'block'}}>
@@ -60,7 +64,7 @@ const AulaIndividual = ({image, video, canal}) => {
         <div style={{display: 'flex', flexDirection: 'column', gap: '-.6rem'}}>
           <Video>{ video }</Video>
           <Canal>{ canal }</Canal>
-          <Button>Assistir <FaYoutube style={{marginLeft: ".7rem"}} size={22}/></Button>
+          <Button onClick={() => verVideo(link)}>Assistir <FaYoutube style={{marginLeft: ".7rem"}} size={22}/></Button>
         </div>
       </div>
     </AulaContainer>

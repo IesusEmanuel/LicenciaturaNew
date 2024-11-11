@@ -69,8 +69,16 @@ const ContainerAulas = styled.div`
   flex-wrap: wrap;
 }`;
 
+const ContainerCursos = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 67%;
+  gap: 4.1rem;
+  justify-content: left;
+  margin-top: -3.8rem;`;
 
-const Modelo = ({ text, content, newcontent, showP, showHorarios, showDisciplinas, showEvents, showBooks, showAulas }) => {
+const Modelo = ({ text, content, newcontent, showP, showHorarios, showDisciplinas, showEvents, showBooks, showAulas, showCursos }) => {
   return (
     <Main>
       <BigText>{ text }</BigText>
@@ -139,13 +147,28 @@ const Modelo = ({ text, content, newcontent, showP, showHorarios, showDisciplina
       </ContainerLivros>
       {/* AULAS */ }
       <ContainerAulas>
-        {showAulas && <AulaIndividual image="https://img.youtube.com/vi/cWBEMN75IMc/sddefault.jpg" video="Derivada - Definição e Cálculo - Cálculo 1 (#16)" canal="Equaciona com Paulo Pereira"/>}
+        {showAulas && <AulaIndividual image="https://img.youtube.com/vi/cWBEMN75IMc/sddefault.jpg" video="Derivada - Definição e Cálculo - Cálculo 1 (#16)" canal="Equaciona com Paulo Pereira" link="https://www.youtube.com/watch?v=blRQ8GUcNJ0"/>}
         {showAulas && <AulaIndividual image="https://img.youtube.com/vi/8NNA-8rimNs/maxresdefault.jpg" video="EXPRESSÕES ALGÉBRICAS | RÁPIDO e FÁCIL" canal="Dicasdemat Sandro Curió"/>}
         {showAulas && <AulaIndividual image="https://img.youtube.com/vi/cWBEMN75IMc/sddefault.jpg" video="Derivada - Definição e Cálculo - Cálculo 1 (#16)" canal="Equaciona com Paulo Pereira"/>}
         {showAulas && <AulaIndividual image="https://img.youtube.com/vi/cWBEMN75IMc/sddefault.jpg" video="Derivada - Definição e Cálculo - Cálculo 1 (#16)" canal="Equaciona com Paulo Pereira"/>}
         {showAulas && <AulaIndividual image="https://img.youtube.com/vi/cWBEMN75IMc/sddefault.jpg" video="Derivada - Definição e Cálculo - Cálculo 1 (#16)" canal="Equaciona com Paulo Pereira"/>}
         
       </ContainerAulas>
+      {/* CURSOS */ }
+      <ContainerCursos>
+      { showCursos && <span style={{color: 'white', lineHeight: '2.7rem', fontWeight: '300'}}>Os cursos voltados para a Licenciatura em Matemática desempenham um papel essencial no desenvolvimento de futuros professores, capacitando-os para ensinar conteúdos matemáticos com clareza e eficiência na educação básica. A formação contínua através de cursos oferece ferramentas atualizadas, metodologias de ensino inovadoras e habilidades pedagógicas indispensáveis para lidar com os desafios da sala de aula.
+      Estes cursos proporcionam uma base sólida em conceitos matemáticos e técnicas pedagógicas, permitindo que os licenciandos se tornem professores críticos e reflexivos. Além disso, eles ajudam a conectar a teoria matemática com sua aplicação prática, o que é vital para ensinar de forma eficaz. Outro ponto importante é o desenvolvimento de estratégias para tornar o ensino da matemática mais acessível e interessante para os alunos.</span>}
+        { showCursos && <div>
+          {/* PASSAR ISSO PRA FORA, DENTRO DE UM INCORPORATES */}
+          <div style={{display: 'flex', justifyContent: 'center', alignItems:'center', gap: '1rem'}}>
+            <span>Álgebra</span>
+            <button>Assistir</button>
+            <img src="/public/udemyLogo.png">
+            </img>
+            <span>Gratuito</span>
+          </div>
+        </div>}
+      </ContainerCursos>
     </Main>
   )
 }
