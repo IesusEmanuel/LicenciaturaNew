@@ -311,17 +311,15 @@ export default function App() {
         <span style={{position: 'relative', left: '90%', cursor: 'pointer'}}onClick={ handleHideOverlay }><FaTimes /></span>
         <img style={{width: '4rem', margin: 'auto', marginBottom: '2rem'}}src={ Logo } />
         <label>Email</label>
-        <Input type="text" name="email" required>
-        </Input>
+        <Input type="email" name="email" required />
         <label>
         Senha</label>
-        <Input name="senha" type="password" required>
-        </Input>
+        <Input name="senha" type="password" required />
         <div style={{display: 'flex', gap: '1rem'}}>
           <input style={{borderColor: '#DF444E'}} type="checkbox"></input>
           <span>Lembrar minha senha</span>
         </div>
-        <LoginButton onClick={ login }>Login</LoginButton>
+        <LoginButton onClick={ login } type="submit">Login</LoginButton>
       </form>
       </div>
       )}
