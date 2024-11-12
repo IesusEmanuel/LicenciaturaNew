@@ -23,25 +23,23 @@ import Noticias from "/src/components/noticias.jsx";
 export default function App() {
 
   // MEU FORM
-  const [formData, setFormData] = useState({
-    email: '',
-    senha: '',
-  });
+  // const [formData, setFormData] = useState({
+  //   email: '',
+  //   senha: '',
+  // });
 
-  const handleInputChange = (e) => {
-    e.preventDefault();
-    const { name, value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      ...formData,
-      [name]: value
-    }));
-  };
+  // const handleInputChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setFormData((prevState) => ({
+  //     ...prevState,
+  //     [name]: value,
+  //   }));
+  // };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    window.alert(formData);
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   window.alert(formData);
+  // };
 
   const DropdownContainer = styled.div`
     position: relative;
@@ -219,7 +217,7 @@ export default function App() {
   }
   
   const login = () => {
-    toast.success("Login Efetuado com sucesso", {
+    toast.error("Usuário ou senha inválidos", {
       position: window.innerWidth <= 1080 ? "bottom-center" : "top-right",
     });
     handleHideOverlay();
@@ -297,7 +295,7 @@ export default function App() {
                     alignItems: 'center',
                     zIndex: '999'}}> 
       
-      <form onSubmit={handleSubmit} style={{ display: 'flex',
+      <form style={{ display: 'flex',
                      flexDirection: 'column',
                      width: '250px',
                      background: '#fff',
@@ -307,19 +305,17 @@ export default function App() {
         <span style={{position: 'relative', left: '90%', cursor: 'pointer'}}onClick={ handleHideOverlay }><FaTimes /></span>
         <img style={{width: '4rem', margin: 'auto', marginBottom: '2rem'}}src={ Logo } />
         <label>Email</label>
-        <Input type="text" name="email" value={formData.email}
-          onChange={handleInputChange} required>
+        <Input type="text" name="email" required>
         </Input>
         <label>
         Senha</label>
-        <Input name="senha" value={formData.senha}
-          onChange={handleInputChange} type="password" required>
+        <Input name="senha" type="password" required>
         </Input>
         <div style={{display: 'flex', gap: '1rem'}}>
           <input style={{borderColor: '#DF444E'}} type="checkbox"></input>
           <span>Lembrar minha senha</span>
         </div>
-        <LoginButton onClick={ login } type="submit">Login</LoginButton>
+        <LoginButton onClick={ login }>Login</LoginButton>
       </form>
       </div>
       )}
