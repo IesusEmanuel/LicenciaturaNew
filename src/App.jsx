@@ -215,6 +215,12 @@ export default function App() {
   const hideNavBar = () => {
     setIsNavOnScreen(false);
   }
+
+  const hideMobileNavBar = () => {
+    if (window.innerWidth <= 1080) {
+      setIsNavOnScreen(false);
+    }
+  }
   
   const login = () => {
     toast.error("Usuário ou senha inválidos", {
@@ -241,16 +247,16 @@ export default function App() {
           >
             <span style={{ cursor: 'pointer', fontSize: '1rem' }}>Curso <FaChevronDown /></span>
             <DropdownContent isOpen={openDropdown === 'curso'}>
-              <DropdownItem onClick={ hideNavBar } to="/">Home</DropdownItem>
-              <DropdownItem onClick={ hideNavBar } to="/curso/horarios">Horários</DropdownItem>
-              <DropdownItem onClick={ hideNavBar } to="/curso/disciplinas">Disciplinas</DropdownItem>
-              <DropdownItem onClick={ hideNavBar } to="/curso/corpo-docente">Corpo Docente</DropdownItem>
+              <DropdownItem onClick={ hideMobileNavBar } to="/">Home</DropdownItem>
+              <DropdownItem onClick={ hideMobileNavBar } to="/curso/horarios">Horários</DropdownItem>
+              <DropdownItem onClick={ hideMobileNavBar } to="/curso/disciplinas">Disciplinas</DropdownItem>
+              <DropdownItem onClick={ hideMobileNavBar } to="/curso/corpo-docente">Corpo Docente</DropdownItem>
             </DropdownContent>
           </DropdownContainer>
 
           {/* Links existentes */}
-          <Mylink onClick={ hideNavBar } to="/sobre">Sobre</Mylink>
-          <Mylink onClick={ hideNavBar } to="/localizacao">Localização</Mylink>
+          <Mylink onClick={ hideMobileNavBar } to="/sobre">Sobre</Mylink>
+          <Mylink onClick={ hideMobileNavBar } to="/localizacao">Localização</Mylink>
 
           {/* Dropdown para Materiais */}
           <DropdownContainer
@@ -259,9 +265,9 @@ export default function App() {
           >
             <span style={{ cursor: 'pointer', fontSize: '1rem'}} >Materiais <FaChevronDown /></span>
             <DropdownContent isOpen={openDropdown === 'materiais'}>
-              <DropdownItem onClick={ hideNavBar } to="/materiais/livros">Livros</DropdownItem>
-              <DropdownItem onClick={ hideNavBar } to="/materiais/video-aulas">Video-aulas</DropdownItem>
-              <DropdownItem onClick={ hideNavBar } to="/materiais/cursos">Cursos</DropdownItem>
+              <DropdownItem onClick={ hideMobileNavBar } to="/materiais/livros">Livros</DropdownItem>
+              <DropdownItem onClick={ hideMobileNavBar } to="/materiais/video-aulas">Video-aulas</DropdownItem>
+              <DropdownItem onClick={ hideMobileNavBar } to="/materiais/cursos">Cursos</DropdownItem>
             </DropdownContent>
           </DropdownContainer>
 
@@ -272,9 +278,9 @@ export default function App() {
           >
             <span style={{ cursor: 'pointer', fontSize: '1rem'}}>Mais <FaChevronDown /></span>
             <DropdownContent isOpen={openDropdown === 'mais'}>
-              <DropdownItem onClick={ hideNavBar } to="/mais/contato">Contato</DropdownItem>
-              <DropdownItem onClick={ hideNavBar } to="/mais/noticias">Notícias</DropdownItem>
-              <DropdownItem onClick={ hideNavBar } to="/mais/eventos">Eventos</DropdownItem>
+              <DropdownItem onClick={ hideMobileNavBar } to="/mais/contato">Contato</DropdownItem>
+              <DropdownItem onClick={ hideMobileNavBar } to="/mais/noticias">Notícias</DropdownItem>
+              <DropdownItem onClick={ hideMobileNavBar } to="/mais/eventos">Eventos</DropdownItem>
             </DropdownContent>
           </DropdownContainer>
 
