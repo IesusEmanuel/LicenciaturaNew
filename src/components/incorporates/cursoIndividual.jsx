@@ -6,6 +6,13 @@ const CursoContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  @media Screen and (max-width: 1080px) {
+    flex-direction: column;
+    gap: 1.1rem;
+    isplay: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 const Botao = styled.button`

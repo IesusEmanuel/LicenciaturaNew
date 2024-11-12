@@ -4,11 +4,17 @@ import { FaDownload } from "react-icons/fa";
 
 const Livro = styled.span`
   font-size: 1.2rem;
-  color: white`;
+  color: white;
+  @media Screen and (max-width: 1080px) {
+    font-size: .9rem;
+  }`;
 
 const Autor = styled.span`
   font-size: 1rem;
-  color: #c0c0c0`
+  color: #c0c0c0;
+  @media Screen and (max-width: 1080px) {
+    font-size: .7rem;
+  }`
   ;
 
 const Myimage = styled.img`
@@ -34,8 +40,8 @@ const Button = styled.button`
   }
 
   @media Screen and (max-width: 1080px){
-    padding: .4rem;
-    width: 5rem;
+    padding: .4rem 1rem;
+    width: 4.44rem;
     font-weight: 400;
   }
 `;

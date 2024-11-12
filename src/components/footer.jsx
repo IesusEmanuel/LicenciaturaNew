@@ -34,7 +34,8 @@ const Footer = () => {
       justify-content: left;
       align-items: left;
       padding-left: 0;
-      margin-top: 5.3rem;
+      width: 100%;
+      margin-top: 1.3rem;
     }
 `;
 

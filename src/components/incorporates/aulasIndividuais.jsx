@@ -13,7 +13,11 @@ const Canal = styled.span`
 
 const Myimage = styled.img`
   width: 21rem;
-  height: auto;`;
+  height: auto;
+  
+  @media Screen and (max-width: 1080px){
+    width: 17rem;
+  }`;
 
 const Button = styled.button`
   margin-top: 1rem;
@@ -37,6 +41,7 @@ const Button = styled.button`
   @media Screen and (max-width: 1080px){
     padding: .4rem;
     width: 10rem;
+    height: 3.4rem;
     font-weight: 400;
   }
 `;

@@ -10,8 +10,10 @@ import Curso from "./incorporates/cursoIndividual.jsx";
 import FormContato from "./incorporates/formContato.jsx";
 import Noticia from "./incorporates/noticiaIndividuais.jsx";
 
+// IMPORT LIVROS
 import FirstBook from "/public/livro1.png";
-import SecondBook from "/public/livro2.png";
+
+// IMPORT LOGOS
 import UdemyLogo from "/public/udemyLogo.png";
 import BradescoLogo from "/public/bradescologo.svg";
 
@@ -48,7 +50,7 @@ const Content = styled.span`
 
   @media Screen and (max-width: 1080px) {
     line-height: 2.08rem;
-    width: 79%;
+    width: 80%;
     font-weight: 300;
   }
 `;
@@ -62,6 +64,7 @@ const ContainerLivros = styled.div`
   justify-content: left;
   margin-top: -3.8rem;
   @media Screen and (max-width: 1080px){
+    width: 83%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -89,8 +92,20 @@ const ContainerCursos = styled.div`
   width: 67%;
   gap: 4.1rem;
   margin-top: -3.8rem;
+  @media Screen and (max-width: 1080px) {
+    width: 88%;
+  }
   `;
 
+const TextCurso = styled.span`
+  color: white;
+  lineHeight: 2.7rem;
+  fontWeight: 300;
+  @media Screen and (max-width: 1080px) {
+    text-align: justify;
+    line-height: 1.8rem;
+  }
+`;
 const Hr = styled.hr`
   width: 67%;
   @media Screen and (max-width: 1080px) {
@@ -191,8 +206,8 @@ const Modelo = ({ text, content, newcontent, showP, showHorarios, showDisciplina
       </ContainerAulas>
       {/* CURSOS */ }
       <ContainerCursos>
-      { showCursos && <span style={{color: 'white', lineHeight: '2.7rem', fontWeight: '300'}}>Os cursos voltados para a Licenciatura em Matemática desempenham um papel essencial no desenvolvimento de futuros professores, capacitando-os para ensinar conteúdos matemáticos com clareza e eficiência na educação básica. A formação contínua através de cursos oferece ferramentas atualizadas, metodologias de ensino inovadoras e habilidades pedagógicas indispensáveis para lidar com os desafios da sala de aula.
-      Estes cursos proporcionam uma base sólida em conceitos matemáticos e técnicas pedagógicas, permitindo que os licenciandos se tornem professores críticos e reflexivos. Além disso, eles ajudam a conectar a teoria matemática com sua aplicação prática, o que é vital para ensinar de forma eficaz. Outro ponto importante é o desenvolvimento de estratégias para tornar o ensino da matemática mais acessível e interessante para os alunos.</span>}
+      { showCursos && <TextCurso>Os cursos voltados para a Licenciatura em Matemática desempenham um papel essencial no desenvolvimento de futuros professores, capacitando-os para ensinar conteúdos matemáticos com clareza e eficiência na educação básica. A formação contínua através de cursos oferece ferramentas atualizadas, metodologias de ensino inovadoras e habilidades pedagógicas indispensáveis para lidar com os desafios da sala de aula.
+      Estes cursos proporcionam uma base sólida em conceitos matemáticos e técnicas pedagógicas, permitindo que os licenciandos se tornem professores críticos e reflexivos. Além disso, eles ajudam a conectar a teoria matemática com sua aplicação prática, o que é vital para ensinar de forma eficaz. Outro ponto importante é o desenvolvimento de estratégias para tornar o ensino da matemática mais acessível e interessante para os alunos.</TextCurso>}
         { showCursos && <Curso course_name="Álgebra" image={ UdemyLogo } price="Gratuito"/>}
         { showCursos && <Curso course_name="Álgebra" image={ UdemyLogo } price="Pago"/>}
         { showCursos && <Curso course_name="Álgebra" image={ UdemyLogo } price="Gratuito"/>}

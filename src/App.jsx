@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './global.css';
 import Logo from "/public/Logo.svg";
 import styled from 'styled-components';
@@ -28,17 +28,16 @@ export default function App() {
     senha: '',
   });
 
-  // Função para atualizar o state quando os inputs mudarem
   const handleInputChange = (e) => {
-    e.prevenDefault();
-    const { email,value } = e.target;
-    setFormData({
+    e.preventDefault();
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
       ...formData,
-      [email]: value
-    });
+      [name]: value
+    }));
   };
 
-  // Função para manipular o envio do formulário
   const handleSubmit = (e) => {
     e.preventDefault();
     window.alert(formData);
@@ -60,7 +59,7 @@ export default function App() {
 
   const DropdownItem = styled(Link)`
     color: #000;
-    padding: 12px 16px;
+    padding: 10px 12px;
     text-decoration: none;
     display: block;
 
@@ -92,24 +91,46 @@ export default function App() {
     }`;
 
   const Nav = styled.nav`
-  transition: all 500ms ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.3rem;
+    
     @media Screen and (max-width: 1080px) {
       flex-direction: column;
       background: #202020;
-      width: 250px;
-      height: 100vh;
+      width: 220px;
+      height: 100%;
       position: fixed;
       z-index: 999;
-      right: 0px;
+      right: 0;
       top: 0;
       justify-content: center;
       align-items: center;
+      overflow: hidden;
+      gap: 2.3rem;
+    }
+  
+    @media Screen and (max-width: 1920px){
+      display: flex;
     }
     
-    @media Screen and (max-width: 1920px){
+    @media (min-width: 768px) {
       display: flex;
     }`;
 
+
+  const Input = styled.input`
+    border: solid 1px #DF444E;
+    height: 1.44rem;
+    padding: .1rem .7rem; 
+    color: black;
+    ::placeholder {
+      color: #888; 
+      opacity: 1; 
+    }
+    `;
+  
   const LoginButton = styled.button`
     height: 4.2rem;
     background-color: #DF444E;
@@ -132,6 +153,17 @@ export default function App() {
       display: flex;
     }
   `;
+
+  const Header = styled.header`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3.2rem;
+    background-color: #171616;
+    height: 6.5rem;
+    @media Screen and (max-width: 1080px) {
+      padding: 1rem 1.1rem;
+    }`;
   
   const [openDropdown, setOpenDropdown] = useState(null);
 
@@ -144,8 +176,29 @@ export default function App() {
   };
 
   const [isOverlayVisible, setIsOverlayVisible] = useState(false);
-  const [isNavOnScreen, setIsNavOnScreen] = useState(true);
-  
+  const [isNavOnScreen, setIsNavOnScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setIsNavOnScreen(true); // Garante que a nav fique visível em telas grandes
+      } else {
+        setIsNavOnScreen(false); // Oculta em telas pequenas
+      }
+    };
+
+    // Executa quando a página carrega e ao redimensionar
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    // Limpeza do listener ao desmontar o componente
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const toggleNav = () => {
+    setIsNavOnScreen((prev) => !prev); // Alterna o estado em telas menores
+  };
+
   // Função para abrir o overlay
   const handleShowOverlay = () => {
     setIsOverlayVisible(true);
@@ -166,20 +219,22 @@ export default function App() {
   }
   
   const login = () => {
-    toast.success("Login Efetuado com sucesso");  
+    toast.success("Login Efetuado com sucesso", {
+      position: window.innerWidth <= 1080 ? "bottom-center" : "top-right",
+    });
     handleHideOverlay();
   };
   return (   
     <Router>
       <ToastContainer />
-      <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem 3.2rem', backgroundColor: "#171616", height: '6.5rem'}}>
+      <Header>
         <Mylink style={{cursor: 'pointer' }} to="/">
-          <img style={{width: '4.7rem', aspectRatio: '1/1'}}src={ Logo } />
+          <img style={{width: '4.7rem', aspectRatio: '1/1', zIndex: '999'}}src={ Logo } />
         </Mylink>
 
         <NavButtonClose><FaBars size={22} onClick={ showNavBar } /></NavButtonClose>
         {isNavOnScreen && (
-        <Nav style={{ display: 'flex', gap: '3.3rem', justifyContent: 'center', alignItems: 'center'}}>
+        <Nav>
           <NavButtonClose><FaTimes style={{ position: 'absolute', top: '7.4rem', right: '1.7rem'}}size={22} onClick={ hideNavBar } /></NavButtonClose>
           {/* Dropdown para Curso */}
           <DropdownContainer
@@ -188,16 +243,16 @@ export default function App() {
           >
             <span style={{ cursor: 'pointer', fontSize: '1rem' }}>Curso <FaChevronDown /></span>
             <DropdownContent isOpen={openDropdown === 'curso'}>
-              <DropdownItem to="/">Home</DropdownItem>
-              <DropdownItem to="/curso/horarios">Horários</DropdownItem>
-              <DropdownItem to="/curso/disciplinas">Disciplinas</DropdownItem>
-              <DropdownItem to="/curso/corpo-docente">Corpo Docente</DropdownItem>
+              <DropdownItem onClick={ hideNavBar } to="/">Home</DropdownItem>
+              <DropdownItem onClick={ hideNavBar } to="/curso/horarios">Horários</DropdownItem>
+              <DropdownItem onClick={ hideNavBar } to="/curso/disciplinas">Disciplinas</DropdownItem>
+              <DropdownItem onClick={ hideNavBar } to="/curso/corpo-docente">Corpo Docente</DropdownItem>
             </DropdownContent>
           </DropdownContainer>
 
           {/* Links existentes */}
-          <Mylink to="/sobre">Sobre</Mylink>
-          <Mylink to="/localizacao">Localização</Mylink>
+          <Mylink onClick={ hideNavBar } to="/sobre">Sobre</Mylink>
+          <Mylink onClick={ hideNavBar } to="/localizacao">Localização</Mylink>
 
           {/* Dropdown para Materiais */}
           <DropdownContainer
@@ -206,9 +261,9 @@ export default function App() {
           >
             <span style={{ cursor: 'pointer', fontSize: '1rem'}} >Materiais <FaChevronDown /></span>
             <DropdownContent isOpen={openDropdown === 'materiais'}>
-              <DropdownItem to="/materiais/livros">Livros</DropdownItem>
-              <DropdownItem to="/materiais/video-aulas">Video-aulas</DropdownItem>
-              <DropdownItem to="/materiais/cursos">Cursos</DropdownItem>
+              <DropdownItem onClick={ hideNavBar } to="/materiais/livros">Livros</DropdownItem>
+              <DropdownItem onClick={ hideNavBar } to="/materiais/video-aulas">Video-aulas</DropdownItem>
+              <DropdownItem onClick={ hideNavBar } to="/materiais/cursos">Cursos</DropdownItem>
             </DropdownContent>
           </DropdownContainer>
 
@@ -219,16 +274,16 @@ export default function App() {
           >
             <span style={{ cursor: 'pointer', fontSize: '1rem'}}>Mais <FaChevronDown /></span>
             <DropdownContent isOpen={openDropdown === 'mais'}>
-              <DropdownItem to="/mais/contato">Contato</DropdownItem>
-              <DropdownItem to="/mais/noticias">Notícias</DropdownItem>
-              <DropdownItem to="/mais/eventos">Eventos</DropdownItem>
+              <DropdownItem onClick={ hideNavBar } to="/mais/contato">Contato</DropdownItem>
+              <DropdownItem onClick={ hideNavBar } to="/mais/noticias">Notícias</DropdownItem>
+              <DropdownItem onClick={ hideNavBar } to="/mais/eventos">Eventos</DropdownItem>
             </DropdownContent>
           </DropdownContainer>
 
           <NormalButton onClick={ handleShowOverlay }>Login</NormalButton>
         </Nav>
       )}
-      </header>
+      </Header>
 
       {isOverlayVisible && (
       <div style={{position: 'fixed',
@@ -252,14 +307,14 @@ export default function App() {
         <span style={{position: 'relative', left: '90%', cursor: 'pointer'}}onClick={ handleHideOverlay }><FaTimes /></span>
         <img style={{width: '4rem', margin: 'auto', marginBottom: '2rem'}}src={ Logo } />
         <label>Email</label>
-        <input type="text" name="email" value={formData.email}
-          onChange={handleInputChange} style={{border: 'solid 1px #DF444E', height: '1.44rem', padding: '.1rem .7rem'}} required>
-        </input>
+        <Input type="text" name="email" value={formData.email}
+          onChange={handleInputChange} required>
+        </Input>
         <label>
         Senha</label>
-        <input name="senha" value={formData.senha}
-          onChange={handleInputChange} type="password" style={{border: 'solid 1px #DF444E' , height: '1.44rem', padding: '.1rem .7rem'}} required>
-        </input>
+        <Input name="senha" value={formData.senha}
+          onChange={handleInputChange} type="password" required>
+        </Input>
         <div style={{display: 'flex', gap: '1rem'}}>
           <input style={{borderColor: '#DF444E'}} type="checkbox"></input>
           <span>Lembrar minha senha</span>

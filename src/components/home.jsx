@@ -4,14 +4,19 @@ import Students from "/new-Students.png";
 
 const slideIn = keyframes`
   from {
-    transform: translateX(100%); /* Inicia fora da tela, à direita */
-    opacity: 0; /* Inicia invisível */
+    opacity: 0;
   }
   to {
-    transform: translateX(0); /* Termina na posição normal */
-    opacity: 1; /* Termina visível */
+    opacity: 1;
   }
 `;
+
+const appear = keyframes`
+from {
+opacity: 0;
+}to {
+opacity: 0.2
+}`;
 
 const Main = styled.main`
   display: flex;
@@ -21,9 +26,11 @@ const Main = styled.main`
   background: #171616;
   padding: .3rem 8rem;
   z-index: 2;
-  @media Screen and (max-width: 768px) {
+  overflow: hidden;
+  @media Screen and (max-width: 1080px) {
     width: 100%;
-    padding: .3rem 1rem;
+    padding: .1rem;
+    align-items: center;
   }
 `;
 
@@ -37,8 +44,9 @@ const Bigger = styled.h1`
   z-index: 2;
   @media Screen and (max-width: 768px) {
     margin-top: 2rem;
-    font-size: 3.3rem;
-    width: 100%;
+    font-size: 2.3rem;
+    text-align: left;
+    width: 80%;
   }
 `; 
 
@@ -97,27 +105,30 @@ const Description = styled.span`
   font-weight: 300;
   margin: 1.8rem 0;
   z-index: 2;
-  @media Screen and (max-width: 768px) {
-    width: 70%;
+  @media Screen and (max-width: 1080px) {
+    width: 80%;
     text-align: left;
+    line-height: 1.4rem;
+    font-size: .7rem;
   }
 `;
 
 const Imagem = styled.img`
   animation: ${slideIn} 2s ease-in-out;
   width: 80%;
-  z-index: 990;
+  z-index: 2;
   pointer-events: none;
   position: absolute;
   right: 0;
+  overflow: hidden;
   @media Screen and (max-width: 1080px) {
-    animation: none;
+    animation: ${appear} 2s ease-in-out;
     width: 400%;
     height: auto;
     opacity: 0.2;
-    right: -10%;
+    right: 0;
     bottom: 0;
-    z-index: 1;
+    z-index: 2;
   }
 `;
 
