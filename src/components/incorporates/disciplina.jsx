@@ -14,6 +14,8 @@ const Container = styled.div`
   border-radius: 1rem;
   @media Screen and (max-width: 1080px) {
     width: 87%;
+    height: 70%;
+    padding: 1.6rem 1rem;
   }
   `;
 

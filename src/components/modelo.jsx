@@ -45,13 +45,12 @@ const Content = styled.span`
   width: 67%;
   margin: .33rem auto;
   text-align: justify;
-  line-height: 3.2rem;
-  font-weight: 200;
+  line-height: 2.7rem;
+  font-weight: 300;
 
   @media Screen and (max-width: 1080px) {
-    line-height: 2.08rem;
+    line-height: 1.8rem;
     width: 80%;
-    font-weight: 300;
   }
 `;
 
@@ -99,13 +98,15 @@ const ContainerCursos = styled.div`
 
 const TextCurso = styled.span`
   color: white;
-  lineHeight: 2.7rem;
-  fontWeight: 300;
+  line-height: 2.7rem;
+  font-weight: 300;
+  text-align: justify;
   @media Screen and (max-width: 1080px) {
     text-align: justify;
     line-height: 1.8rem;
   }
 `;
+
 const Hr = styled.hr`
   width: 67%;
   @media Screen and (max-width: 1080px) {
