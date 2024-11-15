@@ -245,7 +245,7 @@ export default function App() {
             onMouseEnter={() => handleMouseEnter('curso')}
             onMouseLeave={handleMouseLeave}
           >
-            <span style={{ cursor: 'pointer', fontSize: '1rem' }}>Curso <FaChevronDown /></span>
+            <span style={{ cursor: 'pointer', fontSize: '1rem' }}>Curso<FaChevronDown /></span>
             <DropdownContent isOpen={openDropdown === 'curso'}>
               <DropdownItem onClick={ hideMobileNavBar } to="/">Home</DropdownItem>
               <DropdownItem onClick={ hideMobileNavBar } to="/curso/horarios">Horários</DropdownItem>
@@ -266,7 +266,7 @@ export default function App() {
             <span style={{ cursor: 'pointer', fontSize: '1rem'}} >Materiais <FaChevronDown /></span>
             <DropdownContent isOpen={openDropdown === 'materiais'}>
               <DropdownItem onClick={ hideMobileNavBar } to="/materiais/livros">Livros</DropdownItem>
-              <DropdownItem onClick={ hideMobileNavBar } to="/materiais/video-aulas">Video-aulas</DropdownItem>
+              <DropdownItem onClick={ hideMobileNavBar } to="/materiais/video-aulas">Video-Aulas</DropdownItem>
               <DropdownItem onClick={ hideMobileNavBar } to="/materiais/cursos">Cursos</DropdownItem>
             </DropdownContent>
           </DropdownContainer>
