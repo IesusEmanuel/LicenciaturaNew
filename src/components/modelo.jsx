@@ -199,10 +199,13 @@ const Modelo = ({ text, content, newcontent, showP, showHorarios, showDisciplina
       {/* AULAS */ }
       <ContainerAulas>
         {showAulas && <AulaIndividual image="https://img.youtube.com/vi/cWBEMN75IMc/sddefault.jpg" video="Derivada - Definição e Cálculo - Cálculo 1 (#16)" canal="Equaciona com Paulo Pereira" link="https://www.youtube.com/watch?v=cWBEMN75IMc&pp=ygU0RGVyaXZhZGEgLSBEZWZpbmnDp8OjbyBlIEPDoWxjdWxvIC0gQ8OhbGN1bG8gMSAoIzE2KQ%3D%3D"/>}
-        {showAulas && <AulaIndividual image="https://img.youtube.com/vi/8NNA-8rimNs/maxresdefault.jpg" video="EXPRESSÕES ALGÉBRICAS | RÁPIDO e FÁCIL" canal="Dicasdemat Sandro Curió"/>}
-        {showAulas && <AulaIndividual image="https://img.youtube.com/vi/cWBEMN75IMc/sddefault.jpg" video="Derivada - Definição e Cálculo - Cálculo 1 (#16)" canal="Equaciona com Paulo Pereira"/>}
-        {showAulas && <AulaIndividual image="https://img.youtube.com/vi/cWBEMN75IMc/sddefault.jpg" video="Derivada - Definição e Cálculo - Cálculo 1 (#16)" canal="Equaciona com Paulo Pereira"/>}
-        {showAulas && <AulaIndividual image="https://img.youtube.com/vi/cWBEMN75IMc/sddefault.jpg" video="Derivada - Definição e Cálculo - Cálculo 1 (#16)" canal="Equaciona com Paulo Pereira"/>}
+        {showAulas && <AulaIndividual image="https://img.youtube.com/vi/iXUGadXsBd0/maxresdefault.jpg" video="Fácil e Rápido | Aprenda | Determinantes" canal="Dicasdemat Sandro Curió" link="https://www.youtube.com/watch?v=iXUGadXsBd0&t=223s"/>}
+        {showAulas && <AulaIndividual image="https://img.youtube.com/vi/4kjaMznGUnY/maxresdefault.jpg" video="Mas afinal, o que é a Derivada?!" canal="Professor Julio Lombado" link="https://www.youtube.com/watch?v=4kjaMznGUnY&t=205s"/>}
+        {showAulas && <AulaIndividual image="https://img.youtube.com/vi/JFw9ihPyrMI/maxresdefault.jpg" video="Logaritmos. Onde vou usar ?" canal="Professor Possani" link="https://www.youtube.com/watch?v=JFw9ihPyrMI"/>}
+        {showAulas && <AulaIndividual image="https://img.youtube.com/vi/1_HQNgyrVco/maxresdefault.jpg" video="Ângulos Complementares e suplementares em 12 minutos" canal="Dicasdemat Sandro Curió" link="https://www.youtube.com/watch?v=1_HQNgyrVco"/>}
+        {showAulas && <AulaIndividual image="https://img.youtube.com/vi/lHqTFWNBtmQ/maxresdefault.jpg" video="Geometria Analítica |Rápido e Fácil" canal="Dicasdemat Sandro Curió" link="https://www.youtube.com/watch?v=lHqTFWNBtmQ"/>}
+        {showAulas && <AulaIndividual image="https://img.youtube.com/vi/40GoqH9-uBM/maxresdefault.jpg" video="Geometria Analítica 01: Distância entre dois pontos no plano cartesiano" canal="Matemática no papel" link="https://www.youtube.com/watch?v=40GoqH9-uBM"/>}
+        {showAulas && <AulaIndividual image="https://img.youtube.com/vi/Eki_I2VhFDY/maxresdefault.jpg" video="Como resolver equações do jeito certo | Ledo Vaccaro" canal="Cortes de Matemática e Física" link="https://www.youtube.com/watch?v=Eki_I2VhFDY"/>}
         
       </ContainerAulas>
       {/* CURSOS */ }
