@@ -206,7 +206,11 @@ const Modelo = ({ text, content, newcontent, showP, showHorarios, showDisciplina
         {showAulas && <AulaIndividual image="https://img.youtube.com/vi/lHqTFWNBtmQ/maxresdefault.jpg" video="Geometria Analítica |Rápido e Fácil" canal="Dicasdemat Sandro Curió" link="https://www.youtube.com/watch?v=lHqTFWNBtmQ"/>}
         {showAulas && <AulaIndividual image="https://img.youtube.com/vi/40GoqH9-uBM/maxresdefault.jpg" video="Geometria Analítica 01: Distância entre dois pontos no plano cartesiano" canal="Matemática no papel" link="https://www.youtube.com/watch?v=40GoqH9-uBM"/>}
         {showAulas && <AulaIndividual image="https://img.youtube.com/vi/Eki_I2VhFDY/maxresdefault.jpg" video="Como resolver equações do jeito certo | Ledo Vaccaro" canal="Cortes de Matemática e Física" link="https://www.youtube.com/watch?v=Eki_I2VhFDY"/>}
-        
+        {showAulas && <AulaIndividual image="https://img.youtube.com/vi/8jaLYCGG7io/maxresdefault.jpg" video="LIMITE: a Ideia Fundamental do Cálculo" canal="Tem Ciência" link="https://www.youtube.com/watch?v=8jaLYCGG7io"/>}
+        {showAulas && <AulaIndividual image="https://img.youtube.com/vi/DkCHV5Kbx4o/maxresdefault.jpg" video="Cálculo: Introdução e Noção Intuitiva de Limites (Aula 1 de 15)" canal="Professor Ferretto" link="https://www.youtube.com/watch?v=DkCHV5Kbx4o&list=PLTPg64KdGgYhACfQUtMf3CuhWOfLoTf_a"/>}
+        {showAulas && <AulaIndividual image="https://img.youtube.com/vi/KTaPZq_SUVo/maxresdefault.jpg" video="O que é GEOMETRIA NÃO EUCLIDIANA? - História da Geometria" canal="Tem Ciência" link="https://www.youtube.com/watch?v=KTaPZq_SUVo"/>}
+        {showAulas && <AulaIndividual image="https://img.youtube.com/vi/IBTcgGTtMWI/maxresdefault.jpg" video="OS ELEMENTOS DE EUCLIDES | Ledo Vaccaro" canal="Cortes de Matemática e Física" link="https://www.youtube.com/watch?v=IBTcgGTtMWI"/>}
+        {showAulas && <AulaIndividual image="https://img.youtube.com/vi/Z5H7gIVP9qY/maxresdefault.jpg" video="O que é Topologia" canal="Professor Possani" link="https://www.youtube.com/watch?v=Z5H7gIVP9qY"/>}
       </ContainerAulas>
       {/* CURSOS */ }
       <ContainerCursos>
