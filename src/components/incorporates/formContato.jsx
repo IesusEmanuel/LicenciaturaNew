@@ -36,14 +36,18 @@ const SubmitButton = styled.button`
   }
   `;
 
+const SendMessage = () => {
+  window.confirm("Mensagem Enviada com sucesso!");
+}
+
 const FormContato = () => {
   return (
     <Formulario>
-      <Input placeholder="Nome"></Input>
-      <Input placeholder="Email"></Input>
+      <Input placeholder="Nome" required></Input>
+      <Input placeholder="Email" required></Input>
       <Input placeholder="Assunto"></Input>
-      <AreadeTexto placeholder="Mensagem"></AreadeTexto>
-      <SubmitButton>Enviar</SubmitButton>
+      <AreadeTexto placeholder="Mensagem" required></AreadeTexto>
+      <SubmitButton onClick={ SendMessage }>Enviar</SubmitButton>
     </Formulario>
   )
 }
