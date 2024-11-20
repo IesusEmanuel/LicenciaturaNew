@@ -45,12 +45,16 @@ const PriceContainer = styled.span`
     'gray'};
 `;
 
-const Curso = ({ course_name, image, price }) => {
+const verVideo = (link) => {
+  window.open(link, "_blank");
+}
+
+const Curso = ({ course_name, image, price, link}) => {
   return (
     <CursoContainer>
         <span style={{color: 'white'}}>{ course_name }</span><span style={{color: 'white', fontSize: '.6rem'}}>by</span>
         <img style={{width: '2.8rem', height: 'auto'}}src={ image }></img>
-        <Botao>Assistir</Botao>
+        <Botao onClick={() => verVideo(link)}>Assistir</Botao>
         <PriceContainer price={price}>{ price }</PriceContainer>
     </CursoContainer>
   )

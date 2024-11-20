@@ -216,13 +216,9 @@ const Modelo = ({ text, content, newcontent, showP, showHorarios, showDisciplina
       <ContainerCursos>
       { showCursos && <TextCurso>Os cursos voltados para a Licenciatura em Matemática desempenham um papel essencial no desenvolvimento de futuros professores, capacitando-os para ensinar conteúdos matemáticos com clareza e eficiência na educação básica. A formação contínua através de cursos oferece ferramentas atualizadas, metodologias de ensino inovadoras e habilidades pedagógicas indispensáveis para lidar com os desafios da sala de aula.
       Estes cursos proporcionam uma base sólida em conceitos matemáticos e técnicas pedagógicas, permitindo que os licenciandos se tornem professores críticos e reflexivos. Além disso, eles ajudam a conectar a teoria matemática com sua aplicação prática, o que é vital para ensinar de forma eficaz. Outro ponto importante é o desenvolvimento de estratégias para tornar o ensino da matemática mais acessível e interessante para os alunos.</TextCurso>}
-        { showCursos && <Curso course_name="Álgebra" image={ UdemyLogo } price="Gratuito"/>}
-        { showCursos && <Curso course_name="Álgebra" image={ UdemyLogo } price="Pago"/>}
-        { showCursos && <Curso course_name="Álgebra" image={ UdemyLogo } price="Gratuito"/>}
-        { showCursos && <Curso course_name="Álgebra" image={ BradescoLogo } price="Gratuito"/>}
-        { showCursos && <Curso course_name="Álgebra" image={ BradescoLogo } price="Gratuito"/>}
-        { showCursos && <Curso course_name="Álgebra" image={ UdemyLogo } price="Pago"/>}
-        { showCursos && <Curso course_name="Álgebra" image={ UdemyLogo } price="Pago"/>}
+        { showCursos && <Curso link="https://www.udemy.com/course/excel-para-matematicos/" course_name="Excel para Matemáticos" image={ UdemyLogo } price="Gratuito"/>}
+        { showCursos && <Curso link="https://www.udemy.com/course/calculo-somente-exercicios-resolvidos/" course_name="Cálculo para quem detesta Cálculo" image={ UdemyLogo } price="Pago"/>}
+        { showCursos && <Curso link="https://www.udemy.com/course/curso-de-limites-e-limites-equivalentes/" course_name="Curso de limites e limites equivalentes" image={ UdemyLogo } price="Gratuito"/>}
       </ContainerCursos>
       {/* CONTATO */}
       <ContainerContato>
