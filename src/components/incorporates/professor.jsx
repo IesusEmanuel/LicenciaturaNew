@@ -36,8 +36,12 @@ const Curriculo = styled.a`
   }
 `;
 
+const verCurriculo = (link) => {
+  window.open(link, "_blank");
+}
 
-const Professor = ({ nivel, nome, disciplinas, coord }) => {
+
+const Professor = ({ nivel, nome, disciplinas, coord, link }) => {
   return (
     <>
     <Container>
@@ -49,7 +53,7 @@ const Professor = ({ nivel, nome, disciplinas, coord }) => {
       {disciplinas.map((disciplina, index) => (
         <Disc key={index}>{disciplina}</Disc>
       ))}
-      <Curriculo>Ver</Curriculo>
+      <Curriculo onClick={() => verCurriculo(link)}>Ver</Curriculo>
     </Container>
     </>
   );

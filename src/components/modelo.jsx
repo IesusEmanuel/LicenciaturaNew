@@ -15,7 +15,7 @@ import FirstBook from "/public/livro1.png";
 
 // IMPORT LOGOS
 import UdemyLogo from "/public/udemyLogo.png";
-import BradescoLogo from "/public/bradescologo.svg";
+// import BradescoLogo from "/public/bradescologo.svg";
 
 const Main = styled.main` 
   display: flex;
@@ -140,25 +140,22 @@ const Modelo = ({ text, content, newcontent, showP, showHorarios, showDisciplina
       <Content>{ newcontent }</Content>
       {/* PROFESSORES */}
       <div style={{display: 'flex', flexDirection:'column', width:'67%', gap: '2.1rem', justifyContent: 'left', marginTop: '-4.8rem'}}>
-      { showP && <Professor nivel="Mestrado" nome="José Silvino Dias" disciplinas={["Álgebra Linear", "Matemática Discreta"]}/> }
-        { showP && <Professor nivel="Doutorado" nome="Ana Clara Souza" disciplinas={["Física Quântica", "Termodinâmica"]} /> }
-        { showP && <Professor nivel="Mestrado" nome="Carlos Eduardo Ribeiro" disciplinas={["Cálculo", "Geometria Analítica"]} /> }
-        { showP && <Professor nivel="Especialização" nome="Fernanda Gomes" disciplinas={["Lógica de Programação", "Algoritmos"]} /> }
-        { showP && <Professor nivel="Graduação" nome="João Pedro Ferreira" disciplinas={["Banco de Dados", "Engenharia de Software"]} /> }
-        { showP && <Professor nivel="Doutorado" nome="Mariana Silva" disciplinas={["Inteligência Artificial", "Machine Learning"]} /> }
-        { showP && <Professor nivel="Mestrado" nome="Ricardo Azevedo" disciplinas={["Teoria dos Grafos", "Complexidade de Algoritmos"]} coord={true} /> }
-        { showP && <Professor nivel="Especialização" nome="Sofia Almeida" disciplinas={["Desenvolvimento Web", "Design de Interfaces"]} /> }
-        { showP && <Professor nivel="Graduação" nome="Bruno Oliveira" disciplinas={["Eletricidade Básica", "Circuitos Elétricos"]} /> }
-        { showP && <Professor nivel="Doutorado" nome="Gabriela Lima" disciplinas={["Econometria", "Finanças Corporativas"]} /> }
-        { showP && <Professor nivel="Mestrado" nome="Lucas Fernandes" disciplinas={["Estrutura de Dados", "Programação Orientada a Objetos"]} /> }
-        { showP && <Professor nivel="Especialização" nome="Marcos Vinícius Costa" disciplinas={["Marketing Digital", "Gestão de Projetos"]} /> }
-        { showP && <Professor nivel="Graduação" nome="Beatriz Santos" disciplinas={["Redes de Computadores", "Segurança da Informação"]} /> }
-        { showP && <Professor nivel="Doutorado" nome="Juliana Paiva" disciplinas={["Bioquímica", "Biologia Molecular"]} /> }
-        { showP && <Professor nivel="Mestrado" nome="Rafael Castro" disciplinas={["Física Clássica", "Mecânica dos Fluidos"]} /> }
-        { showP && <Professor nivel="Especialização" nome="Camila Barbosa" disciplinas={["Gerenciamento de Redes", "Virtualização"]} /> }
-        { showP && <Professor nivel="Graduação" nome="Gustavo Mendes" disciplinas={["Análise de Sistemas", "Sistemas Operacionais"]} /> }
-        { showP && <Professor nivel="Mestrado" nome="Larissa Ferreira" disciplinas={["Cálculo Numérico", "Álgebra Abstrata"]} /> }
-
+        { showP && <Professor link="https://www.google.com.br/" nivel="Mestrado" nome="André Geraldo da Costa Coelho" disciplinas={["Administração Financeira I", "Contabilidade Básica", "Métodos Quantitativos", "Empreendedorismo e Plano de Negócios", "Fundamentos de Economia Financeira"]}/> }
+        { showP && <Professor link="https://www.google.com.br/" nivel="Doutorado" nome="Bruno Oliveira Lafetá" disciplinas={["Estatística Experimental"]}/> }
+        { showP && <Professor link="https://www.sofascore.com/" nivel="Doutorado" nome="Cleonir Coelho Simões" disciplinas={["Física I", "Física II"]}/> }
+        { showP && <Professor nivel="Mestrado" nome="Débora Marques Ferreira Araújo" disciplinas={["Português Instrumental"]}/> }
+        { showP && <Professor nivel="Mestrado" nome="Elias Pedro Rosa" disciplinas={["Filosofia da Educação", "Sociologia da Educação"]}/> }
+        { showP && <Professor nivel="Doutorado" nome="Geovália Oliveira Coelho" disciplinas={["Introdução à Informática", "Introdução à Programação", "Introdução à Computação"]}/> }
+        { showP && <Professor nivel="Doutorado" nome="José Fernandes da Silva" disciplinas={["Metodologia Científica", "Projeto de Trabalho de Conclusão de Curso", "Seminários de Pesquisa em Matemática", "Modelagem Matemática na Educação Básica", "Redação Técnico-Científica em Educação Matemática"]}/> }
+        { showP && <Professor nivel="Mestrado" nome="José Silvino Dias" disciplinas={["Cálculo I", "Cálculo II", "Cálculo Numérico", "Álgebra na Educação Básica II", "Recursos Computacionais"]}/> }
+        { showP && <Professor nivel="Doutorado" nome="Jossara Bazílio de Souza Bicalho" disciplinas={["Resolução de Problemas", "Investigação em Educação Matemática", "Formação de Professores de Matemática", "Ludicidade no Ensino de Matemática", "Metodologias Ativas de Ensino"]}/> }
+        { showP && <Professor nivel="Mestrado" nome="Roseana Moreira de Figueiredo Coelho" disciplinas={["Funções de Variáveis Complexas", "Estruturas Algébricas", "Modelagem Matemática", "Fundamentos de Análise"]}/> }
+        { showP && <Professor nivel="Doutorado" nome="Sandra Regina do Amaral" disciplinas={["Antropologia da Educação", "Políticas Públicas na Educação Básica", "Psicologia da Educação", "Didática Geral", "Libras", "Gestão Educacional"]}/> }
+        { showP && <Professor nivel="Mestrado" nome="Sandro Salles Gonçalves" disciplinas={["Ensino de Geometria e Medidas e Extensão", "Ensino de Estatística e Probabilidade e Extensão", "Tendências em Educação Matemática", "Pesquisa Operacional", "Intervenção Pedagógica em Matemática e Extensão", "Educação Inclusiva"]}/> }
+        { showP && <Professor nivel="Mestrado" nome="Sérgio Felipe Abreu de Britto Bastos" disciplinas={["Ensino de Números e Álgebra e Extensão", "Laboratório de Ensino de Matemática I e Extensão", "Laboratório de Ensino de Matemática II e Extensão", "Equações Diferenciais Ordinárias"]}/> }
+        { showP && <Professor nivel="Mestrado" nome="Silvino Domingos Neto" disciplinas={["Cálculo III", "Cálculo IV", "Desenho Geométrico", "Geometria na Educação Básica I", "Geometria na Educação Básica II", "Geometria Analítica", "Lógica Matemática"]}/> }
+        { showP && <Professor nivel="Mestrado" nome="Tiago de Oliveira Dias" disciplinas={["Estatística Básica", "Álgebra na Educação Básica I", "História da Matemática", "História da Educação e Teorias de Currículo", "Métodos Avançados de Contagem"]}/> }
+        { showP && <Professor coord="true" nivel="Mestrado" nome="Wálmisson Régis de Almeida" disciplinas={["Álgebra Linear", "Análise Combinatória", "Matemática Discreta", "Matemática Financeira", "Teoria dos Números"]}/> }
       </div>
       {/* HORARIOS */}
       <div style={{display: 'flex', flexDirection:'column', width:'67%', gap: '2.1rem', justifyContent: 'center', alignItems: 'flex-start'}}>
