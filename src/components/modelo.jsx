@@ -159,17 +159,7 @@ const Modelo = ({ text, content, newcontent, showP, showHorarios, showDisciplina
       </div>
       {/* HORARIOS */}
       <div style={{display: 'flex', flexDirection:'column', width:'67%', gap: '2.1rem', justifyContent: 'center', alignItems: 'flex-start'}}>
-      { showHorarios && <Horario myroute="https://www.google.com.br/" hor="Horarios LM211"/> }
-      { showHorarios && <Horario myroute="https://www.google.com.br/" hor="Horarios LM211"/> }
-      { showHorarios && <Horario myroute="https://www.google.com.br/" hor="Horarios LM211"/> }
-      { showHorarios && <Horario myroute="https://www.google.com.br/" hor="Horarios LM211"/> }
-      { showHorarios && <Horario myroute="https://www.google.com.br/" hor="Horarios LM211"/> }
-      { showHorarios && <Horario myroute="https://www.google.com.br/" hor="Horarios LM211"/> }
-      { showHorarios && <Horario myroute="https://www.google.com.br/" hor="Horarios LM211"/> }
-      { showHorarios && <Horario myroute="https://www.google.com.br/" hor="Horarios LM211"/> }
-      { showHorarios && <Horario myroute="https://www.google.com.br/" hor="Horarios LM211"/> }
-      { showHorarios && <Horario myroute="https://www.google.com.br/" hor="Horarios LM211"/> }
-      { showHorarios && <Horario myroute="https://www.google.com.br/" hor="Horarios LM211"/> }
+      { showHorarios && <Horario myroute="https://drive.google.com/drive/folders/1Cw6GGNgQT-zcEGJUzXBbWm73xFLEA8pM" hor="Horarios LM2-2024"/> }
       </div>
       {/* DISCIPLINAS */}
        <div style={{display: 'flex', flexDirection:'row', flexWrap: 'wrap', width:'67%', gap: '2.1rem', justifyContent: 'left'}}>
