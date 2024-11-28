@@ -69,7 +69,7 @@ const Disciplina = ({ periodo, materia, desc}) => {
       <Desc>{ desc }</Desc>
       <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1.1rem'}}>
         <Redbutton>Requisitos</Redbutton>
-        <Normalbutton>Ver todas</Normalbutton>
+        <Normalbutton>Ver Mais</Normalbutton>
       </div>
     </Container>
   )
