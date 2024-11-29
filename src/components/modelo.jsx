@@ -9,6 +9,7 @@ import AulaIndividual from "./incorporates/aulasIndividuais.jsx";
 import Curso from "./incorporates/cursoIndividual.jsx";
 import FormContato from "./incorporates/formContato.jsx";
 import Noticia from "./incorporates/noticiaIndividuais.jsx";
+import { toast, ToastContainer } from "react-toastify";
 
 // IMPORT LIVROS
 import FirstBook from "/public/livro1.png";
@@ -113,6 +114,21 @@ const Hr = styled.hr`
     width: 79%;
   }`;
 
+const Button = styled.button`
+  background: #DF444E;
+  border: solid 1px transparent;
+  color: white;
+  height: 4rem;
+  width: 100%;
+  margin: 1.4rem 0;
+  transition: all 300ms ease;
+  cursor: not-allowed;
+  &:hover {
+    background: white;
+    color: #DF444E;
+  }
+  `;
+  
 const ContainerContato = styled.div`
   display: flex;
   flex-direction: column;
@@ -130,6 +146,10 @@ const ContainerNoticias = styled.div`
   width: 67%;
   gap: 4.1rem;
 `;
+
+const loginObrigatorio = () => {
+  toast.info("Você precisa estar logado para fazer isso");
+}
 
 const Modelo = ({ text, content, newcontent, showP, showHorarios, showDisciplinas, showEvents, showBooks, showAulas, showCursos, showContato, showNoticias}) => {
   return (
@@ -235,6 +255,8 @@ const Modelo = ({ text, content, newcontent, showP, showHorarios, showDisciplina
       <ContainerLivros>
         {showBooks && <LivroIndividual link="https://www.infolivros.org/pdfview/9620-calculo-diferencial-e-integral-marcia-federson-e-gabriela-planas/" link2="https://dl.dropboxusercontent.com/sh/d6plg2q4oydvpcs/AAD7fJ0rwbqU9wby5Am99bXga/Archivos%20Infolivros%20POR/Temas%20%28Continuaci%C3%B3n%29/Calculo%20Integral/05.%20C%C3%A1lculo%20Diferencial%20e%20Integral%20autor%20M%C3%A1rcia%20Federson%20e%20Gabriela%20Planas.pdf?dl=1" image="https://www.publicdomainpictures.net/pictures/280000/velka/not-found-image-15383864787lu.jpg" autor="Márcia Federson e Gabriela Planas" titulo="Cálculo Diferencial e Integral"/>}
         {showBooks && <LivroIndividual link="https://drive.google.com/file/d/1mOAKH8uw2pRFwtqsXNDK7xcd3chDq5oD/view" link2="https://drive.usercontent.google.com/uc?id=1mOAKH8uw2pRFwtqsXNDK7xcd3chDq5oD&export=download" image={ FirstBook } autor="James Stewart" titulo="Cálculo I" />}
+        <Button onClick= { loginObrigatorio }>Sugerir um livro</Button>
+        <ToastContainer />
       </ContainerLivros>
       {/* AULAS */ }
       <ContainerAulas>
