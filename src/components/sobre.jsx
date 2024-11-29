@@ -49,13 +49,30 @@ const Sobre = () => {
         <li style={{fontWeight: '200', color: 'white'}}><span>Os Parâmetros Curriculares, numa perspectiva de construir referenciais nacionais comuns sem, contudo, deixar de reconhecer a necessidade de se respeitarem as diversidades regionais, políticas e culturais existentes.</span></li>
       </ul>
 
+      <div style={{display: 'flex', flexDirection: 'column', justifyContent:'center', width: '69%', margin: '5rem auto'}}>
+      <h1 style={{color: 'white', textTransform: 'Uppercase'}}>O que você aprenderá no curso?</h1>
+      <p style={{color: 'white', fontWeight: '300', lineHeight: '2.7rem', marginTop: '2rem'}}>
+      <span style={{fontWeight: '600', fontSize: '1.2rem'}}>1. Matemática Pura e Aplicada</span> <br />
+      Você estudará conceitos fundamentais da Matemática, como álgebra, geometria, cálculo, estatística, probabilidade e matemática discreta. Além disso, disciplinas de modelagem matemática e resolução de problemas mostram como aplicar os conhecimentos teóricos em situações do dia a dia e no ensino.
+         <br /> <br />
+        <span style={{fontWeight: '600', fontSize: '1.2rem'}}>2. Formação Pedagógica </span><br />
+      Ser um bom professor vai muito além de dominar o conteúdo. Por isso, o curso inclui disciplinas de didática, psicologia da educação, sociologia da educação e gestão educacional. Essas matérias ajudam a entender como os alunos aprendem e como adaptar sua abordagem para atender às necessidades de diferentes públicos.
+         <br /> <br />
+          <span style={{fontWeight: '600', fontSize: '1.2rem'}}>3. Práticas Educacionais </span><br />
+      Desde o início do curso, você terá contato com práticas pedagógicas, oficinas e laboratórios. Nos últimos semestres, o estágio supervisionado permite vivenciar a realidade das salas de aula, com a orientação de professores experientes. Essa prática é essencial para desenvolver habilidades práticas e construir confiança na docência.
+         <br /> <br />
+            <span style={{fontWeight: '600', fontSize: '1.2rem'}}>4. História e Filosofia da Matemática </span><br />
+      Ao estudar as origens e o desenvolvimento da Matemática ao longo da história, você entenderá como ela se tornou uma das ciências mais fundamentais da humanidade. Isso também ajuda a criar estratégias para mostrar aos alunos a relevância e a beleza da Matemática.
+         <br /> <br />
+              <span style={{fontWeight: '600', fontSize: '1.2rem'}}>5. Tecnologia no Ensino da Matemática </span><br />
+      Ferramentas digitais, softwares matemáticos e plataformas educacionais são incorporados ao curso para que você aprenda a usar a tecnologia como aliada no ensino.</p>
+      </div>
       <div style={{display: 'flex', justifyContent:'center', width: '100%', margin: '4rem auto'}}>
         <Frame src="https://www.youtube.com/embed/cX-OLTTpc8U" frameborder="0" allowfullscreen="allowfullscreen" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></Frame>
-
-        </div>
+      </div>
 
       <div style={{display: 'flex', justifyContent:'center', width: '100%', margin: '4rem auto'}}>
-      <Button onClick={ irParaoCurso }>Ver mais sobre o curso</Button>
+        <Button onClick={ irParaoCurso }>Ver mais sobre o curso</Button>
       </div>
     </>
   )
