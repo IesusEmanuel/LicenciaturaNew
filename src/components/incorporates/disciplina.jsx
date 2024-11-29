@@ -61,6 +61,10 @@ const Normalbutton = styled.button`
       border: none;
     }`;
 
+const abrirIf = () => {
+  window.open("https://meu.ifmg.edu.br/Corpore.Net/Login.aspx", "_blank");
+}
+
 const Disciplina = ({ periodo, materia, desc}) => {
   return(
     <Container>
@@ -68,8 +72,8 @@ const Disciplina = ({ periodo, materia, desc}) => {
       <Materia>{ materia }</Materia>
       <Desc>{ desc }</Desc>
       <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1.1rem'}}>
-        <Redbutton>Requisitos</Redbutton>
-        <Normalbutton>Ver Mais</Normalbutton>
+        <Normalbutton>Saiba Mais</Normalbutton>
+        <Redbutton onClick={() => abrirIf()}>Meu IFMG</Redbutton>
       </div>
     </Container>
   )

@@ -29,7 +29,7 @@ const Disc = styled.span`
 const Curriculo = styled.a`
   color: #Df444E;
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 600;
   cursor: pointer;
   &:hover {
     text-decoration: underline;
@@ -53,7 +53,7 @@ const Professor = ({ nivel, nome, disciplinas, coord, link }) => {
       {disciplinas.map((disciplina, index) => (
         <Disc key={index}>{disciplina}</Disc>
       ))}
-      <Curriculo onClick={() => verCurriculo(link)}>Ver</Curriculo>
+      <Curriculo onClick={() => verCurriculo(link)}>Lattes</Curriculo>
     </Container>
     </>
   );
