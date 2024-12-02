@@ -29,11 +29,13 @@ const Disc = styled.span`
 const Curriculo = styled.a`
   color: #Df444E;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 300;
   cursor: pointer;
-  &:hover {
-    text-decoration: underline;
-  }
+  span {
+    font-weight: 600;
+    &:hover {
+      text-decoration: underline;
+    }}
 `;
 
 const verCurriculo = (link) => {
@@ -53,7 +55,7 @@ const Professor = ({ nivel, nome, disciplinas, coord, link }) => {
       {disciplinas.map((disciplina, index) => (
         <Disc key={index}>{disciplina}</Disc>
       ))}
-      <Curriculo onClick={() => verCurriculo(link)}>Lattes</Curriculo>
+      <Curriculo onClick={() => verCurriculo(link)}>ver mais sobre <span>{ nome }</span> </Curriculo>
     </Container>
     </>
   );
