@@ -12,7 +12,13 @@ import Noticia from "./incorporates/noticiaIndividuais.jsx";
 import { toast, ToastContainer } from "react-toastify";
 
 // IMPORT LIVROS
-import FirstBook from "/public/livro1.png";
+// import FirstBook from "/public/livro1.png";
+import PrimeiroLivro from "/public/livros/acp.png";
+import SegundoLivro from "/public/livros/ic.png";
+import TerceiroLivro from "/public/livros/cia.png";
+import QuartoLivro from "/public/livros/acp2.png";
+import QuintoLivro from "/public/livros/eb.png";
+import SextoLivro from "/public/livros/mfp.png";
 
 // IMPORT LOGOS
 import UdemyLogo from "/public/udemyLogo.png";
@@ -148,7 +154,7 @@ const ContainerNoticias = styled.div`
 `;
 
 const loginObrigatorio = () => {
-  toast.info("Você precisa estar logado para fazer isso");
+  toast.info("Login Necessário");
 }
 
 const Modelo = ({ text, content, newcontent, showP, showHorarios, showDisciplinas, showEvents, showBooks, showAulas, showCursos, showContato, showNoticias}) => {
@@ -253,9 +259,13 @@ const Modelo = ({ text, content, newcontent, showP, showHorarios, showDisciplina
       </div>}
       { /* LIVROS */ }
       <ContainerLivros>
-        {showBooks && <LivroIndividual link="https://www.infolivros.org/pdfview/9620-calculo-diferencial-e-integral-marcia-federson-e-gabriela-planas/" link2="https://dl.dropboxusercontent.com/sh/d6plg2q4oydvpcs/AAD7fJ0rwbqU9wby5Am99bXga/Archivos%20Infolivros%20POR/Temas%20%28Continuaci%C3%B3n%29/Calculo%20Integral/05.%20C%C3%A1lculo%20Diferencial%20e%20Integral%20autor%20M%C3%A1rcia%20Federson%20e%20Gabriela%20Planas.pdf?dl=1" image="https://www.publicdomainpictures.net/pictures/280000/velka/not-found-image-15383864787lu.jpg" autor="Márcia Federson e Gabriela Planas" titulo="Cálculo Diferencial e Integral"/>}
-        {showBooks && <LivroIndividual link="https://drive.google.com/file/d/1mOAKH8uw2pRFwtqsXNDK7xcd3chDq5oD/view" link2="https://drive.usercontent.google.com/uc?id=1mOAKH8uw2pRFwtqsXNDK7xcd3chDq5oD&export=download" image={ FirstBook } autor="James Stewart" titulo="Cálculo I" />}
-        <Button onClick= { loginObrigatorio }>Sugerir um livro</Button>
+        {showBooks && <LivroIndividual link="https://books.google.com.br/books?id=MqfMDwAAQBAJ&printsec=frontcover&hl=pt-BR#v=onepage&q&f=false" link2="https://books.google.com.br/books?id=MqfMDwAAQBAJ&printsec=frontcover&hl=pt-BR#v=onepage&q&f=false" image={ SegundoLivro } autor="Paulo Boulos" titulo="Introdução ao Cálculo"/>}
+        {showBooks && <LivroIndividual link="https://www.infolivros.org/pdfview/14987-analise-combinatoria-e-probabilidade-varios-autores/" link2="https://dl.dropboxusercontent.com/sh/d6plg2q4oydvpcs/AAAPDNfYizLZm5tanPE0CpuFa/Archivos%20Infolivros%20POR/Temas%20%28Continuacion%202%29/Temas%20Continuaci%C3%B3n%20Soporte/114019%20libros%20de%20combinatoria/Analise%20Combinatoria%20e%20Probabilidade%20-%20Nazar%C3%A9%20Bezerra.pdf?dl=1" image={ PrimeiroLivro } autor="Nazaré Bezerra" titulo="Analise Combinatoria e Probabilidade" />}
+        {showBooks && <LivroIndividual link="https://books.google.com.br/books?hl=pt-BR&lr=&id=0yVzFi0LYFoC&oi=fnd&pg=PA4&dq=C%C3%A1lculo+Integral&ots=u_2Y-axKxK&sig=qBZnFOIldE5it0hzZdL_XiybLzY&redir_esc=y#v=onepage&q=C%C3%A1lculo%20Integral&f=false" link2="https://books.google.com.br/books?hl=pt-BR&lr=&id=0yVzFi0LYFoC&oi=fnd&pg=PA4&dq=C%C3%A1lculo+Integral&ots=u_2Y-axKxK&sig=qBZnFOIldE5it0hzZdL_XiybLzY&redir_esc=y#v=onepage&q=C%C3%A1lculo%20Integral&f=false" image={ TerceiroLivro } autor="Vários Autores" titulo="Cálculo Integral Avançado" />}
+        {showBooks && <LivroIndividual link="https://books.google.com.br/books?hl=pt-BR&lr=&id=0yVzFi0LYFoC&oi=fnd&pg=PA4&dq=C%C3%A1lculo+Integral&ots=u_2Y-axKxK&sig=qBZnFOIldE5it0hzZdL_XiybLzY&redir_esc=y#v=onepage&q=C%C3%A1lculo%20Integral&f=false" link2="https://books.google.com.br/books?hl=pt-BR&lr=&id=0yVzFi0LYFoC&oi=fnd&pg=PA4&dq=C%C3%A1lculo+Integral&ots=u_2Y-axKxK&sig=qBZnFOIldE5it0hzZdL_XiybLzY&redir_esc=y#v=onepage&q=C%C3%A1lculo%20Integral&f=false" image={ QuartoLivro } autor="André Gustavo e Viviane Simioli" titulo="Análise Combinatória e Probabilidade" />}
+        {showBooks && <LivroIndividual link="http://biblioteca.isctem.ac.mz/bitstream/123456789/1040/1/Estat%C3%ADstica%20B%C3%A1sica%20by%20P.%20A.%20Morettin%2C%20W.%20de%20O.%20Bussab%20%28z-lib.org%29.pdf" link2="https://books.google.com.br/books?hl=pt-BR&lr=&id=0yVzFi0LYFoC&oi=fnd&pg=PA4&dq=C%C3%A1lculo+Integral&ots=u_2Y-axKxK&sig=qBZnFOIldE5it0hzZdL_XiybLzY&redir_esc=y#v=onepage&q=C%C3%A1lculo%20Integral&f=false" image={ QuintoLivro } autor="Wilton de O. Bussab e Pedro A. Morettin" titulo="Estatística Básica" />}
+        {showBooks && <LivroIndividual link="https://books.google.com.br/books?id=AtsnEQAAQBAJ&printsec=frontcover&hl=pt-BR#v=onepage&q&f=false" link2="https://books.google.com.br/books?id=AtsnEQAAQBAJ&printsec=frontcover&hl=pt-BR#v=onepage&q&f=false" image={ SextoLivro } autor="Paulo Vagner Ferreira" titulo="Matemática Financeira na Prática" />}
+        {showBooks && <Button onClick= { loginObrigatorio }>Sugerir um livro</Button> }
         <ToastContainer />
       </ContainerLivros>
       {/* AULAS */ }

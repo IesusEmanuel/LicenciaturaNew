@@ -63,7 +63,7 @@ const baixarLivro = (link2) => {
 
 const LivroIndividual = ({image, titulo, autor, link, link2}) => {
   return (
-    <div style={{display: 'flex', gap: '1rem'}}>
+    <div style={{display: 'flex', gap: '1rem', marginTop: '2.3rem'}}>
       <div style={{display: 'block'}}>
         <Myimage src={ image }></Myimage>
       </div>
