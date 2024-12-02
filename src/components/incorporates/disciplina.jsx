@@ -54,12 +54,8 @@ const Normalbutton = styled.button`
     border: solid 1px #DF444E;
     color: #DF444E;
     transition: all 400ms ease;
-    cursor: pointer;
-    &:hover {
-      background: #DF444E;
-      color: #fff;
-      border: none;
-    }`;
+    cursor: default;
+    `;
 
 const abrirIf = () => {
   window.open("https://meu.ifmg.edu.br/Corpore.Net/Login.aspx", "_blank");
@@ -72,7 +68,7 @@ const Disciplina = ({ periodo, materia, desc}) => {
       <Materia>{ materia }</Materia>
       <Desc>{ desc }</Desc>
       <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1.1rem'}}>
-        <Normalbutton>Saiba Mais</Normalbutton>
+        <Normalbutton>Grade 2024</Normalbutton>
         <Redbutton onClick={() => abrirIf()}>Meu IFMG</Redbutton>
       </div>
     </Container>

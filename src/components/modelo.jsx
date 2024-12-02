@@ -190,67 +190,103 @@ const Modelo = ({ text, content, newcontent, showP, showHorarios, showDisciplina
       { showHorarios && <Horario myroute="https://drive.google.com/drive/folders/1Cw6GGNgQT-zcEGJUzXBbWm73xFLEA8pM" hor="Horarios LM2-2024"/> }
       </div>
       {/* DISCIPLINAS */}
-       <div style={{display: 'flex', flexDirection:'row', flexWrap: 'wrap', width:'67%', gap: '2.1rem', justifyContent: 'left'}}>
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Administração Financeira I" desc="A disciplina de Administração Financeira I tem como objetivo introduzir os fundamentos da gestão financeira e suas aplicações práticas."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Álgebra Linear" desc="A disciplina de Álgebra Linear aborda conceitos fundamentais de vetores, matrizes e transformações lineares."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Álgebra na Educação Básica I" desc="A disciplina de Álgebra na Educação Básica I tem como objetivo desenvolver o raciocínio lógico e as aplicações básicas em sala de aula."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Álgebra na Educação Básica II" desc="A disciplina de Álgebra na Educação Básica II tem como objetivo desenvolver o raciocínio lógico e a capacidade de resolver problemas através da linguagem matemática."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Análise Combinatória" desc="A disciplina de Análise Combinatória trata das técnicas de contagem e suas aplicações."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Antropologia da Educação" desc="A disciplina de Antropologia da Educação explora as interações entre cultura, sociedade e práticas educacionais."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Cálculo I" desc="A disciplina de Cálculo I introduz os fundamentos do cálculo diferencial e integral."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Cálculo II" desc="A disciplina de Cálculo II aprofunda o estudo de integrais, séries e funções de várias variáveis."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Cálculo III" desc="A disciplina de Cálculo III aborda tópicos avançados como integrais múltiplas e campos vetoriais."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Cálculo IV" desc="A disciplina de Cálculo IV trabalha com tópicos avançados de cálculo diferencial e integral aplicado."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Cálculo Numérico" desc="A disciplina de Cálculo Numérico introduz métodos computacionais para resolução de problemas matemáticos."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Contabilidade Básica" desc="A disciplina de Contabilidade Básica fornece fundamentos sobre registros financeiros e relatórios contábeis."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Desenho Geométrico" desc="A disciplina de Desenho Geométrico aborda conceitos e aplicações de formas geométricas."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Didática Geral" desc="A disciplina de Didática Geral oferece fundamentos para planejamento e prática pedagógica."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Educação Inclusiva" desc="A disciplina de Educação Inclusiva aborda estratégias para ensino em contextos diversos e inclusivos."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Empreendedorismo e Plano de Negócios" desc="A disciplina de Empreendedorismo e Plano de Negócios explora como criar e gerenciar empresas."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Ensino de Estatística e Probabilidade e Extensão" desc="A disciplina de Ensino de Estatística e Probabilidade e Extensão apresenta métodos de ensino e aplicação dessas áreas."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Ensino de Geometria e Medidas e Extensão" desc="A disciplina de Ensino de Geometria e Medidas e Extensão explora a aplicação prática de conceitos geométricos."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Ensino de Números e Álgebra e Extensão" desc="A disciplina de Ensino de Números e Álgebra e Extensão desenvolve habilidades para ensinar conceitos numéricos e algébricos."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Equações Diferenciais Ordinárias" desc="A disciplina de Equações Diferenciais Ordinárias trata da modelagem matemática de fenômenos dinâmicos."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Estruturas Algébricas" desc="A disciplina de Estruturas Algébricas analisa grupos, anéis e corpos, e suas propriedades."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Filosofia da Educação" desc="A disciplina de Filosofia da Educação reflete sobre os fundamentos e objetivos do processo educativo."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Física I" desc="A disciplina de Física I aborda conceitos básicos de mecânica e energia."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Física II" desc="A disciplina de Física II explora tópicos como eletricidade e magnetismo."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Formação de Professores de Matemática" desc="A disciplina de Formação de Professores de Matemática prepara para o ensino eficaz da matemática."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Fundamentos de Análise" desc="A disciplina de Fundamentos de Análise explora os conceitos iniciais da análise matemática."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Fundamentos de Economia Financeira" desc="A disciplina de Fundamentos de Economia Financeira trata de conceitos econômicos aplicados às finanças."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Funções de Variáveis Complexas" desc="A disciplina de Funções de Variáveis Complexas explora análises no plano complexo e suas aplicações."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Geometria Analítica" desc="A disciplina de Geometria Analítica explora a representação de figuras geométricas no plano e no espaço."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Geometria na Educação Básica I" desc="A disciplina de Geometria na Educação Básica I introduz conceitos básicos para o ensino de geometria."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Geometria na Educação Básica II" desc="A disciplina de Geometria na Educação Básica II aprofunda métodos de ensino de geometria no contexto escolar."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Gestão Educacional" desc="A disciplina de Gestão Educacional aborda estratégias de administração em instituições de ensino."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="História da Educação e Teorias de Currículo" desc="A disciplina de História da Educação e Teorias de Currículo analisa o desenvolvimento histórico e teórico do currículo escolar."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="História da Matemática" desc="A disciplina de História da Matemática examina o desenvolvimento da matemática ao longo dos tempos."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Introdução à Computação" desc="A disciplina de Introdução à Computação apresenta os fundamentos de hardware e software."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Introdução à Informática" desc="A disciplina de Introdução à Informática aborda conceitos básicos de computação e suas aplicações."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Introdução à Programação" desc="A disciplina de Introdução à Programação ensina os princípios básicos do desenvolvimento de software."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Investigação em Educação Matemática" desc="A disciplina de Investigação em Educação Matemática analisa métodos e práticas para melhorar o ensino da matemática."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Libras" desc="A disciplina de Libras promove o aprendizado da Língua Brasileira de Sinais e sua aplicação na educação."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Lógica Matemática" desc="A disciplina de Lógica Matemática explora conceitos de proposições, conectivos e argumentos válidos."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Ludicidade no Ensino de Matemática" desc="A disciplina de Ludicidade no Ensino de Matemática investiga métodos lúdicos para facilitar o aprendizado."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Matemática Discreta" desc="A disciplina de Matemática Discreta aborda tópicos como teoria dos grafos, conjuntos e combinatória."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Matemática Financeira" desc="A disciplina de Matemática Financeira introduz conceitos de juros simples, compostos e amortização."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Métodos Avançados de Contagem" desc="A disciplina de Métodos Avançados de Contagem explora técnicas combinatórias avançadas."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Métodos Quantitativos" desc="A disciplina de Métodos Quantitativos aplica conceitos matemáticos em decisões gerenciais."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Metodologias Ativas de Ensino" desc="A disciplina de Metodologias Ativas de Ensino foca em técnicas de ensino que envolvem os alunos como participantes ativos."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Metodologia Científica" desc="A disciplina de Metodologia Científica ensina métodos e técnicas para pesquisa acadêmica."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Modelagem Matemática" desc="A disciplina de Modelagem Matemática explora como traduzir problemas reais para o âmbito matemático."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Modelagem Matemática na Educação Básica" desc="A disciplina de Modelagem Matemática na Educação Básica explora o uso prático de modelagem em sala de aula."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Português Instrumental" desc="A disciplina de Português Instrumental trabalha com leitura e escrita para objetivos específicos."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Pesquisa Operacional" desc="A disciplina de Pesquisa Operacional apresenta técnicas para otimização de processos e recursos."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Políticas Públicas na Educação Básica" desc="A disciplina de Políticas Públicas na Educação Básica explora a relação entre políticas e práticas educacionais."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Projeto de Trabalho de Conclusão de Curso" desc="A disciplina de Projeto de Trabalho de Conclusão de Curso prepara o estudante para desenvolver sua pesquisa final."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Psicologia da Educação" desc="A disciplina de Psicologia da Educação estuda como processos psicológicos influenciam a aprendizagem."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Redação Técnico-Científica em Educação Matemática" desc="A disciplina de Redação Técnico-Científica em Educação Matemática explora as habilidades de escrita científica aplicadas à educação matemática."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Resolução de Problemas" desc="A disciplina de Resolução de Problemas desenvolve habilidades para análise e resolução de problemas matemáticos."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Recursos Computacionais" desc="A disciplina de Recursos Computacionais apresenta ferramentas digitais para o ensino e aprendizado."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Seminários de Pesquisa em Matemática" desc="A disciplina de Seminários de Pesquisa em Matemática foca na apresentação e discussão de pesquisas matemáticas."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Sociologia da Educação" desc="A disciplina de Sociologia da Educação analisa a relação entre sociedade e processos educacionais."/>}
-         {showDisciplinas && <Disciplina periodo="1º Período" materia="Tendências em Educação Matemática" desc="A disciplina de Tendências em Educação Matemática explora inovações e novas abordagens no ensino de matemática."/>}
+       <div style={{display: 'flex', flexDirection:'row', flexWrap: 'wrap', width:'67%', gap: '3.4rem', justifyContent: 'left'}}>
+         {showDisciplinas && <Disciplina periodo="1º Período" materia="ANTROPOLOGIA E EDUCAÇÃO" desc="Estudo das relações entre cultura, sociedade e educação."/>}
+         {showDisciplinas && <Disciplina periodo="1º Período" materia="FORMAÇÃO DE PROFESSORES DE MATEMÁTICA" desc="Introdução aos fundamentos e práticas para a formação de educadores em matemática."/>}
+         {showDisciplinas && <Disciplina periodo="1º Período" materia="FUNDAMENTOS DE MATEMÁTICA ELEMENTAR I" desc="Conceitos básicos e fundamentos essenciais para a matemática elementar."/>}
+         {showDisciplinas && <Disciplina periodo="1º Período" materia="GEOMETRIA EUCLIDIANA PLANA" desc="Estudo das propriedades e relações das figuras geométricas no plano."/>}
+         {showDisciplinas && <Disciplina periodo="1º Período" materia="LÓGICA MATEMÁTICA" desc="Introdução ao raciocínio lógico e suas aplicações na matemática."/>}
+         {showDisciplinas && <Disciplina periodo="1º Período" materia="PORTUGUÊS INSTRUMENTAL" desc="Desenvolvimento de habilidades de leitura, escrita e comunicação voltadas para o contexto acadêmico."/>}
+         {showDisciplinas && <Disciplina periodo="1º Período" materia="INTRODUÇÃO À INFORMÁTICA" desc="Conceitos básicos de informática e suas aplicações no ambiente educacional."/>}
+
+         
+         {showDisciplinas && <Disciplina periodo="2º Período" materia="DESENHO GEOMÉTRICO" desc="Estudo das técnicas de representação gráfica de figuras geométricas com precisão e clareza."/>}
+
+         {showDisciplinas && <Disciplina periodo="2º Período" materia="FILOSOFIA DA EDUCAÇÃO" desc="Análise dos principais conceitos e teorias filosóficas aplicadas à educação e sua prática pedagógica."/>}
+
+         {showDisciplinas && <Disciplina periodo="2º Período" materia="FUNDAMENTOS DE MATEMÁTICA ELEMENTAR II" desc="Aprofundamento dos conceitos básicos de matemática, com foco em álgebra e geometria elementar."/>}
+
+         {showDisciplinas && <Disciplina periodo="2º Período" materia="GEOMETRIA ESPACIAL" desc="Estudo das propriedades e relações das figuras geométricas no espaço tridimensional, como sólidos e suas representações."/>}
+
+         {showDisciplinas && <Disciplina periodo="2º Período" materia="POLÍTICAS PÚBLICAS NA EDUCAÇÃO BÁSICA" desc="Análise das políticas públicas aplicadas à educação básica, visando o desenvolvimento e a inclusão educacional."/>}
+
+         {showDisciplinas && <Disciplina periodo="2º Período" materia="ENSINO DE NÚMEROS, OPERAÇÕES, ÁLGEBRA E FUNÇÕES" desc="Estudo e estratégias para o ensino de operações matemáticas, álgebra e funções no contexto educacional."/>}
+
+         {showDisciplinas && <Disciplina periodo="2º Período" materia="METODOLOGIA CIENTÍFICA" desc="Introdução aos métodos e técnicas de pesquisa científica, abordando estrutura e processos de elaboração de trabalhos acadêmicos."/>}
+
+         {showDisciplinas && <Disciplina periodo="3º Período" materia="ÁLGEBRA LINEAR" desc="Estudo de vetores, matrizes, sistemas lineares e transformações lineares, aplicados a problemas matemáticos e práticos."/>}
+
+         {showDisciplinas && <Disciplina periodo="3º Período" materia="CÁLCULO I" desc="Fundamentos do cálculo diferencial e integral, abordando limites, derivadas, integrais e suas aplicações."/>}
+
+         {showDisciplinas && <Disciplina periodo="3º Período" materia="ENSINO DE GRANDEZAS E, MEDIDAS E GEOMETRIA" desc="Estratégias e práticas de ensino focadas no entendimento e aplicação de grandezas, medidas e conceitos geométricos."/>}
+
+         {showDisciplinas && <Disciplina periodo="3º Período" materia="PSICOLOGIA DA EDUCAÇÃO" desc="Estudo dos aspectos psicológicos que influenciam o processo de ensino-aprendizagem e o comportamento do aluno."/>}
+
+         {showDisciplinas && <Disciplina periodo="3º Período" materia="RECURSOS COMPUTACIONAIS" desc="Exploração das ferramentas computacionais utilizadas no ensino de matemática, com foco na integração tecnológica."/>}
+
+         {showDisciplinas && <Disciplina periodo="3º Período" materia="GEOMETRIA ANALÍTICA" desc="Estudo das relações geométricas através de álgebra, incluindo equações de linhas, cônicas e suas aplicações."/>}
+
+         {showDisciplinas && <Disciplina periodo="4º Período" materia="CÁLCULO II" desc="Aprofundamento no cálculo diferencial e integral, com foco em séries, integrais múltiplas e equações diferenciais."/>}
+
+         {showDisciplinas && <Disciplina periodo="4º Período" materia="DIDÁTICA GERAL" desc="Análise das práticas pedagógicas e dos métodos de ensino em diferentes contextos educacionais e disciplinares."/>}
+
+         {showDisciplinas && <Disciplina periodo="4º Período" materia="ENSINO DE ESTATÍSTICA E MATEMÁTICA FINANCEIRA" desc="Métodos de ensino voltados à estatística e finanças, aplicados à educação matemática e ao cotidiano do aluno."/>}
+
+         {showDisciplinas && <Disciplina periodo="4º Período" materia="ESTATÍSTICA BÁSICA" desc="Fundamentos de estatística, incluindo análise de dados, medidas de tendência central e dispersão e probabilidades."/>}
+
+         {showDisciplinas && <Disciplina periodo="4º Período" materia="FÍSICA I" desc="Estudo das leis fundamentais da física, abordando mecânica, movimento, força e as primeiras leis da termodinâmica."/>}
+
+         {showDisciplinas && <Disciplina periodo="4º Período" materia="MATEMÁTICA FINANCEIRA" desc="Estudo das principais ferramentas e cálculos financeiros, como juros, descontos, amortizações e operações bancárias."/>}
+
+         {showDisciplinas && <Disciplina periodo="5º Período" materia="CÁLCULO III" desc="Aprofundamento do cálculo integral, abordando séries, integrais múltiplas e cálculo vetorial em diversas aplicações."/>}
+
+         {showDisciplinas && <Disciplina periodo="5º Período" materia="FÍSICA II" desc="Estudo de eletricidade, magnetismo, ondas e ótica, explorando os princípios da física em sistemas complexos."/>}
+
+         {showDisciplinas && <Disciplina periodo="5º Período" materia="LABORATÓRIO DE ENSINO DE MATEMÁTICA I" desc="Aplicação prática dos conceitos matemáticos, com foco no ensino de matemática e desenvolvimento de habilidades pedagógicas."/>}
+
+         {showDisciplinas && <Disciplina periodo="5º Período" materia="LIBRAS" desc="Estudo da Língua Brasileira de Sinais (Libras), abordando sua estrutura e aplicação no contexto educacional e social."/>}
+
+         {showDisciplinas && <Disciplina periodo="5º Período" materia="TEORIA DOS NÚMEROS" desc="Estudo das propriedades dos números inteiros, abordando divisibilidade, primos, congruências e teoremas fundamentais."/>}
+
+         {showDisciplinas && <Disciplina periodo="6º Período" materia="CÁLCULO IV" desc="Aprofundamento em equações diferenciais, séries de Fourier e suas aplicações em física e engenharia."/>}
+
+         {showDisciplinas && <Disciplina periodo="6º Período" materia="EDUCAÇÃO INCLUSIVA" desc="Abordagem das práticas pedagógicas inclusivas para atender a alunos com necessidades educacionais especiais."/>}
+
+         {showDisciplinas && <Disciplina periodo="6º Período" materia="PROJETO DE TRABALHO DE CONCLUSÃO DE CURSO" desc="Desenvolvimento de um projeto acadêmico de conclusão de curso, integrando os conhecimentos adquiridos durante a graduação."/>}
+
+         {showDisciplinas && <Disciplina periodo="6º Período" materia="FUNDAMENTOS DE ANÁLISE" desc="Estudo dos conceitos fundamentais de análise matemática, como limites, continuidade e teoremas fundamentais do cálculo."/>}
+
+         {showDisciplinas && <Disciplina periodo="6º Período" materia="LABORATÓRIO DE ENSINO DE MATEMÁTICA II" desc="Prática pedagógica de ensino de matemática, focada na experimentação e no desenvolvimento de habilidades docentes."/>}
+
+         {showDisciplinas && <Disciplina periodo="6º Período" materia="RESOLUÇÃO DE PROBLEMAS" desc="Métodos e estratégias para resolução de problemas matemáticos, abordando técnicas de solução e análise crítica."/>}
+
+         {showDisciplinas && <Disciplina periodo="7º Período" materia="CÁLCULO NUMÉRICO" desc="Estudo dos métodos numéricos para resolução de equações e problemas matemáticos em diversas áreas da ciência."/>}
+
+         {showDisciplinas && <Disciplina periodo="7º Período" materia="INTERVENÇÃO PEDAGÓGICA EM MATEMÁTICA" desc="Planejamento e aplicação de estratégias pedagógicas para melhorar o ensino de matemática e superar dificuldades de aprendizagem."/>}
+
+         {showDisciplinas && <Disciplina periodo="7º Período" materia="INVESTIGAÇÃO EM EDUCAÇÃO MATEMÁTICA" desc="Pesquisa e análise de práticas educacionais em matemática, focando em novas abordagens pedagógicas e inovações."/>}
+
+         {showDisciplinas && <Disciplina periodo="7º Período" materia="SEMINÁRIOS DE PESQUISA EM MATEMÁTICA" desc="Apresentação e discussão de pesquisas acadêmicas na área de matemática, com ênfase em resultados e novas descobertas."/>}
+
+         {showDisciplinas && <Disciplina periodo="7º Período" materia="TÓPICOS EM EDUCAÇÃO MATEMÁTICA" desc="Estudo de temas emergentes e avançados em educação matemática, com foco em metodologias e teorias atuais."/>}
+
+         {showDisciplinas && <Disciplina periodo="8º Período" materia="GESTÃO EDUCACIONAL" desc="Estudo da administração e gestão de instituições educacionais, incluindo planejamento, coordenação e avaliação pedagógica."/>}
+
+         {showDisciplinas && <Disciplina periodo="8º Período" materia="HISTÓRIA DA MATEMÁTICA" desc="Métodos e práticas de pesquisa em educação, com foco na análise de dados, avaliação de resultados e implementação de inovações."/>}
+
+         {showDisciplinas && <Disciplina periodo="8º Período" materia="MODELAGEM MATEMÁTICA NA EDUCAÇÃO BÁSICA" desc="Exploração de técnicas de modelagem matemática aplicadas à resolução de problemas reais, com foco no ensino básico e na construção do raciocínio lógico dos alunos."/>
+         }
+
+         {showDisciplinas && <h1 style={{width: '100%', margin: '2rem 0', color: 'white', fontSize: '2.8rem', textAlign: 'center'}}>OPTATIVAS</h1>}
+         {showDisciplinas && <Disciplina periodo="Optativa" materia="Administração Financeira I" desc="A disciplina de Administração Financeira I tem como objetivo introduzir os fundamentos da gestão financeira e suas aplicações práticas."/>}
+          {showDisciplinas && <Disciplina periodo="Optativa" materia="Análise Combinatória" desc="A Análise Combinatória estuda os princípios e técnicas para contar e organizar conjuntos de elementos de maneira eficiente."/>}
+
+          {showDisciplinas && <Disciplina periodo="Optativa" materia="Administração Financeira" desc="A Administração Financeira é a disciplina que explora os conceitos e práticas de gestão financeira no contexto de organizações."/>}
+
+          {showDisciplinas && <Disciplina periodo="Optativa" materia="Contabilidade Básica" desc="A disciplina de Contabilidade Básica introduz os conceitos fundamentais de contabilidade, incluindo o estudo do balanço patrimonial, demonstração de resultados, ativos, passivos e patrimônio líquido."/>}
+
+          {showDisciplinas && <Disciplina periodo="Optativa" materia="Redação Técnica-Científica em Educação Matemática" desc="A disciplina de Redação Técnica-Científica em Educação Matemática tem como foco o desenvolvimento das habilidades necessárias para escrever e estruturar artigos na área de Educação Matemática."/>}
+
 
        </div>
       {/* EVENTOS */}
