@@ -19,7 +19,14 @@ import TerceiroLivro from "/public/livros/cia.png";
 import QuartoLivro from "/public/livros/acp2.png";
 import QuintoLivro from "/public/livros/eb.png";
 import SextoLivro from "/public/livros/mfp.png";
-
+import SetimoLivro from "/public/livros/dg.png";
+import OitavoLivro from "/public/livros/ucc.png";
+import NonoLivro from "/public/livros/itn.png";
+import DecimoLivro from "/public/livros/cnn.png";
+import DecimoPrimeiroLivro from "/public/livros/cdi.png";
+import DecimoSegundoLivro from "/public/livros/ciii.png";
+import DecimoTerceiroLivro from "/public/livros/cv2.png";
+import DecimoQuartoLivro from "/public/livros/lc.png";
 // IMPORT LOGOS
 import UdemyLogo from "/public/udemyLogo.png";
 // import BradescoLogo from "/public/bradescologo.svg";
@@ -295,12 +302,20 @@ const Modelo = ({ text, content, newcontent, showP, showHorarios, showDisciplina
       </div>}
       { /* LIVROS */ }
       <ContainerLivros>
-        {showBooks && <LivroIndividual link="https://books.google.com.br/books?id=MqfMDwAAQBAJ&printsec=frontcover&hl=pt-BR#v=onepage&q&f=false" link2="https://books.google.com.br/books?id=MqfMDwAAQBAJ&printsec=frontcover&hl=pt-BR#v=onepage&q&f=false" image={ SegundoLivro } autor="Paulo Boulos" titulo="Introdução ao Cálculo"/>}
         {showBooks && <LivroIndividual link="https://www.infolivros.org/pdfview/14987-analise-combinatoria-e-probabilidade-varios-autores/" link2="https://dl.dropboxusercontent.com/sh/d6plg2q4oydvpcs/AAAPDNfYizLZm5tanPE0CpuFa/Archivos%20Infolivros%20POR/Temas%20%28Continuacion%202%29/Temas%20Continuaci%C3%B3n%20Soporte/114019%20libros%20de%20combinatoria/Analise%20Combinatoria%20e%20Probabilidade%20-%20Nazar%C3%A9%20Bezerra.pdf?dl=1" image={ PrimeiroLivro } autor="Nazaré Bezerra" titulo="Analise Combinatoria e Probabilidade" />}
+        {showBooks && <LivroIndividual link="https://books.google.com.br/books?id=MqfMDwAAQBAJ&printsec=frontcover&hl=pt-BR#v=onepage&q&f=false" link2="https://books.google.com.br/books?id=MqfMDwAAQBAJ&printsec=frontcover&hl=pt-BR#v=onepage&q&f=false" image={ SegundoLivro } autor="Paulo Boulos" titulo="Introdução ao Cálculo"/>}
         {showBooks && <LivroIndividual link="https://books.google.com.br/books?hl=pt-BR&lr=&id=0yVzFi0LYFoC&oi=fnd&pg=PA4&dq=C%C3%A1lculo+Integral&ots=u_2Y-axKxK&sig=qBZnFOIldE5it0hzZdL_XiybLzY&redir_esc=y#v=onepage&q=C%C3%A1lculo%20Integral&f=false" link2="https://books.google.com.br/books?hl=pt-BR&lr=&id=0yVzFi0LYFoC&oi=fnd&pg=PA4&dq=C%C3%A1lculo+Integral&ots=u_2Y-axKxK&sig=qBZnFOIldE5it0hzZdL_XiybLzY&redir_esc=y#v=onepage&q=C%C3%A1lculo%20Integral&f=false" image={ TerceiroLivro } autor="Vários Autores" titulo="Cálculo Integral Avançado" />}
         {showBooks && <LivroIndividual link="https://books.google.com.br/books?hl=pt-BR&lr=&id=0yVzFi0LYFoC&oi=fnd&pg=PA4&dq=C%C3%A1lculo+Integral&ots=u_2Y-axKxK&sig=qBZnFOIldE5it0hzZdL_XiybLzY&redir_esc=y#v=onepage&q=C%C3%A1lculo%20Integral&f=false" link2="https://books.google.com.br/books?hl=pt-BR&lr=&id=0yVzFi0LYFoC&oi=fnd&pg=PA4&dq=C%C3%A1lculo+Integral&ots=u_2Y-axKxK&sig=qBZnFOIldE5it0hzZdL_XiybLzY&redir_esc=y#v=onepage&q=C%C3%A1lculo%20Integral&f=false" image={ QuartoLivro } autor="André Gustavo e Viviane Simioli" titulo="Análise Combinatória e Probabilidade" />}
         {showBooks && <LivroIndividual link="http://biblioteca.isctem.ac.mz/bitstream/123456789/1040/1/Estat%C3%ADstica%20B%C3%A1sica%20by%20P.%20A.%20Morettin%2C%20W.%20de%20O.%20Bussab%20%28z-lib.org%29.pdf" link2="https://books.google.com.br/books?hl=pt-BR&lr=&id=0yVzFi0LYFoC&oi=fnd&pg=PA4&dq=C%C3%A1lculo+Integral&ots=u_2Y-axKxK&sig=qBZnFOIldE5it0hzZdL_XiybLzY&redir_esc=y#v=onepage&q=C%C3%A1lculo%20Integral&f=false" image={ QuintoLivro } autor="Wilton de O. Bussab e Pedro A. Morettin" titulo="Estatística Básica" />}
         {showBooks && <LivroIndividual link="https://books.google.com.br/books?id=AtsnEQAAQBAJ&printsec=frontcover&hl=pt-BR#v=onepage&q&f=false" link2="https://books.google.com.br/books?id=AtsnEQAAQBAJ&printsec=frontcover&hl=pt-BR#v=onepage&q&f=false" image={ SextoLivro } autor="Paulo Vagner Ferreira" titulo="Matemática Financeira na Prática" />}
+        {showBooks && <LivroIndividual link="https://educapes.capes.gov.br/bitstream/capes/600614/2/Desenho_Geometrico_livro_CC_BY_SA.PDF" link2="https://educapes.capes.gov.br/bitstream/capes/600614/2/Desenho_Geometrico_livro_CC_BY_SA.PDF" image={ SetimoLivro } autor="Magda Cristina Junqueira e Henrique Mongelli" titulo="Desenho Geométrico" />}
+        {showBooks && <LivroIndividual link="https://sites.icmc.usp.br/manfio/GuidorizziVol1.pdf" link2="https://sites.icmc.usp.br/manfio/GuidorizziVol1.pdf" image={ OitavoLivro } autor="Hamilton Luiz Guidorizzi" titulo="Um curso de Cálculo Volume 1" />}
+        {showBooks && <LivroIndividual link="https://educapes.capes.gov.br/bitstream/capes/432913/2/Livro%20Introduc%C3%A3o%20a%20Teoria%20dos%20Numeros.pdf" link2="https://educapes.capes.gov.br/bitstream/capes/432913/2/Livro%20Introduc%C3%A3o%20a%20Teoria%20dos%20Numeros.pdf" image={ NonoLivro } autor="Francisco César Aires" titulo="Introdução a Teoria dos números" />}
+        {showBooks && <LivroIndividual link="https://repositorio.ufu.br/bitstream/123456789/25218/1/Calculo%20Numerico.pdf" link2="https://repositorio.ufu.br/bitstream/123456789/25218/1/Calculo%20Numerico.pdf" image={ DecimoLivro } autor="César Guilherme de Almeida" titulo="Calculo numérico " />}
+        {showBooks && <LivroIndividual link="https://cm-kls-content.s3.amazonaws.com/201801/INTERATIVAS_2_0/CALCULO_DIFERENCIAL_E_INTEGRAL_IV/U1/LIVRO_UNICO.pdf" link2="https://cm-kls-content.s3.amazonaws.com/201801/INTERATIVAS_2_0/CALCULO_DIFERENCIAL_E_INTEGRAL_IV/U1/LIVRO_UNICO.pdf" image={ DecimoPrimeiroLivro } autor="José de França Bueno e Ulisses Ferreira Kaneko" titulo="Calculo Diferencial e Integral IV" />}
+        {showBooks && <LivroIndividual link="https://canal.cecierj.edu.br/082020/877a11f1be6aa5f2315d0b78e579c389.pdf" link2="https://canal.cecierj.edu.br/082020/877a11f1be6aa5f2315d0b78e579c389.pdf" image={ DecimoSegundoLivro } autor="Mario Olivero da Silva e Nancy de Souza Cardim" titulo="Calculo III" />}
+        {showBooks && <LivroIndividual link="https://profmcruz.wordpress.com/wp-content/uploads/2019/03/calculo-james-stewart-7-edic3a7c3a3o-volume-2.pdf" link2="https://profmcruz.wordpress.com/wp-content/uploads/2019/03/calculo-james-stewart-7-edic3a7c3a3o-volume-2.pdf" image={ DecimoTerceiroLivro } autor="James Stewart" titulo="Calculo II" />}
+        {showBooks && <LivroIndividual link="https://educapes.capes.gov.br/bitstream/capes/429767/2/Logica%20e%20Conjuntos%20-%20Livro.pdf" link2="https://educapes.capes.gov.br/bitstream/capes/429767/2/Logica%20e%20Conjuntos%20-%20Livro.pdf" image={ DecimoQuartoLivro } autor="Francisco Gêvane Muniz Cunha" titulo="Lógica e conjuntos " />}
         {showBooks && <Button onClick= { loginObrigatorio }>Sugerir um livro</Button> }
         <ToastContainer />
       </ContainerLivros>
