@@ -52,7 +52,7 @@ const verVideo = (link) => {
 const Curso = ({ course_name, image, price, link}) => {
   return (
     <CursoContainer>
-        <span style={{color: 'white'}}>{ course_name }</span><span style={{color: 'white', fontSize: '.6rem'}}>by</span>
+        <span style={{color: 'white'}}>{ course_name }</span><span style={{color: 'white', fontSize: '.8rem'}}>por</span>
         <img style={{width: '2.8rem', height: 'auto'}}src={ image }></img>
         <Botao onClick={() => verVideo(link)}>Inscrever-se</Botao>
         <PriceContainer price={price}>{ price }</PriceContainer>
