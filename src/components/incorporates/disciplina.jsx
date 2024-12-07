@@ -2,10 +2,9 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
-  padding: .6rem 1.3rem;
+  padding: 1.1rem 1.3rem;
   width: 15rem;
   height: auto;
-  aspect-ratio: 1/1;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -14,9 +13,9 @@ const Container = styled.div`
   background-color: #fff;
   border-radius: 1rem;
   @media Screen and (max-width: 1080px) {
-    width: 87%;
-    height: 70%;
-    padding: 1.6rem 1rem;
+    width: 97%;
+    height: 20%;
+    padding: 3rem 1rem;
   }
   `;
 
