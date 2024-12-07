@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { ToastContainer, toast } from "react-toastify";
 
 const Formulario = styled.form`
   width: 100%;
@@ -37,7 +38,12 @@ const SubmitButton = styled.button`
   `;
 
 const SendMessage = () => {
-  window.confirm("Mensagem Enviada com sucesso!");
+  const op = window.confirm("Enviar mensagem para licenciatura.contato@gmail.com ?");
+  if(op) { toast.success("Mensagem Enviada com sucesso!");}
+  else {
+    toast.error("Mesagem não enviada!");
+  }
+ 
 }
 
 const FormContato = () => {
@@ -48,6 +54,7 @@ const FormContato = () => {
       <Input placeholder="Assunto"></Input>
       <AreadeTexto placeholder="Mensagem" required></AreadeTexto>
       <SubmitButton onClick={ SendMessage }>Enviar</SubmitButton>
+      <ToastContainer></ToastContainer>
     </Formulario>
   )
 }
