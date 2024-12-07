@@ -136,6 +136,10 @@ const irParaAva = () => {
   window.open('https://ead.ifmg.edu.br/saojoaoevangelista/', "_blank");
 }
 
+const irParaIfmg = () => {
+  window.open('https://www.sje.ifmg.edu.br/portal/', "_blank");
+}
+
 const Home = () => {
   return (
     <>
@@ -145,7 +149,7 @@ const Home = () => {
 
         <Description>Seja bem-vindo ao curso de Licenciatura em Matemática, uma formação projetada para aqueles que desejam não apenas dominar os conceitos matemáticos, mas também desenvolver habilidades pedagógicas para ensinar essa ciência tão fundamental em escolas e instituições de ensino.</Description>
         <div style={{display: 'flex', gap: '1.4rem'}}>
-          <NormalButton>IFMG</NormalButton>
+          <NormalButton onClick={ irParaIfmg }>IFMG</NormalButton>
           <SecondaryButton onClick={ irParaAva }>AVA Presencial</SecondaryButton>
         </div>
       </Main>
