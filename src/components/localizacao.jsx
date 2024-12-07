@@ -1,7 +1,6 @@
 import React from "react";
 import Modelo from "/src/components/modelo.jsx";
 import styled from "styled-components";
-import Predio from "/public/predio-iv.jpg";
 
 const Button = styled.button`
  width: 37%;
@@ -18,6 +17,16 @@ const Button = styled.button`
  @media Screen and (max-width: 1080px){
   width: 80%;
  }`;
+
+const Frame = styled.iframe`
+  border: none;
+  width: 60%; 
+  height: 35rem;
+  @media Screen and (max-width: 1080px) {
+    height: 25rem;
+    width: 88%;
+  }
+`;
 
 const Localizacao = () => {
   const seeMap = () => {
@@ -45,8 +54,9 @@ window.open("https://www.google.com.br/maps/place/Pr%C3%A9dio+III+IFMG+SJE/@-18.
 
       A economia do município é baseada principalmente na agropecuária, com produção de milho, feijão, leite e derivados, além de gado de corte. São João Evangelista sempre contou com indivíduos empreendedores que contribuíram significativamente para o desenvolvimento do município e para a construção de sua história."/>
 
-    <div>
-    <img style={{display: 'flex', justifyContent:'center', width: '60%', margin: '4rem auto'}} src={ Predio } />
+    <div style={{display: 'flex', justifyContent: 'center'}}>
+    <Frame src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3180.772423565792!2d-42.7642233652734!3d-18.547096029770255!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xae3d515f43af7f%3A0x3dd675abb3cb794d!2sPr%C3%A9dio%20III%20IFMG%20SJE!5e0!3m2!1spt-BR!2sbr!4v1733578002538!5m2!1spt-BR!2sbr"
+      loading="lazy"></Frame>
     </div>
     <div style={{display: 'flex', justifyContent:'center', width: '100%', margin: '4rem auto'}}>
       <Button onClick={ seeMap }>Ver no mapa</Button>

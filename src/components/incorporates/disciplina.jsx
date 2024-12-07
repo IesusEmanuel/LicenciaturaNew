@@ -2,9 +2,10 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
-  padding: 0rem 1.3rem;
-  width: 19rem;
-  height: 20rem;
+  padding: .6rem 1.3rem;
+  width: 15rem;
+  height: auto;
+  aspect-ratio: 1/1;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -33,20 +34,6 @@ const Desc = styled.p`
 font-size: .9rem;
 margin-bottom: 2rem;`;
 
-const Redbutton = styled.button`
-    width: 8rem;
-    height: 2.4rem;
-    background-color: #DF444E;
-    border: none;
-    color: #fff;
-    transition: all 400ms ease;
-    cursor: pointer;
-    &:hover {
-      background: #fff;
-      color: #DF444E;
-      border: solid 1px #DF444E;
-    }`;
-
 const Normalbutton = styled.button`
     width: 8rem;
     height: 2.4rem;
@@ -57,9 +44,9 @@ const Normalbutton = styled.button`
     cursor: default;
     `;
 
-const abrirIf = () => {
-  window.open("https://meu.ifmg.edu.br/Corpore.Net/Login.aspx", "_blank");
-}
+// const abrirIf = () => {
+//   window.open("https://meu.ifmg.edu.br/Corpore.Net/Login.aspx", "_blank");
+// }
 
 const Disciplina = ({ periodo, materia, desc}) => {
   return(
@@ -68,8 +55,7 @@ const Disciplina = ({ periodo, materia, desc}) => {
       <Materia>{ materia }</Materia>
       <Desc>{ desc }</Desc>
       <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1.1rem'}}>
-        <Normalbutton>Grade 2024</Normalbutton>
-        <Redbutton onClick={() => abrirIf()}>Meu IFMG</Redbutton>
+        <Normalbutton>Grade 2021</Normalbutton>
       </div>
     </Container>
   )

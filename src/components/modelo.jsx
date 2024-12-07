@@ -197,7 +197,7 @@ const Modelo = ({ text, content, newcontent, showP, showHorarios, showDisciplina
       { showHorarios && <Horario myroute="https://drive.google.com/drive/folders/1Cw6GGNgQT-zcEGJUzXBbWm73xFLEA8pM" hor="Horarios LM2-2024"/> }
       </div>
       {/* DISCIPLINAS */}
-       <div style={{display: 'flex', flexDirection:'row', flexWrap: 'wrap', width:'67%', gap: '3.4rem', justifyContent: 'left'}}>
+       <div style={{display: 'flex', flexDirection:'row', flexWrap: 'wrap', width:'67%', gap: '1.4rem', justifyContent: 'left'}}>
          {showDisciplinas && <Disciplina periodo="1º Período" materia="ANTROPOLOGIA E EDUCAÇÃO" desc="Estudo das relações entre cultura, sociedade e educação."/>}
          {showDisciplinas && <Disciplina periodo="1º Período" materia="FORMAÇÃO DE PROFESSORES DE MATEMÁTICA" desc="Introdução aos fundamentos e práticas para a formação de educadores em matemática."/>}
          {showDisciplinas && <Disciplina periodo="1º Período" materia="FUNDAMENTOS DE MATEMÁTICA ELEMENTAR I" desc="Conceitos básicos e fundamentos essenciais para a matemática elementar."/>}
