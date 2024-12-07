@@ -29,8 +29,9 @@ const Main = styled.main`
   overflow: hidden;
   @media Screen and (max-width: 1080px) {
     width: 100%;
-    padding: .1rem;
-    align-items: center;
+    padding: 0 2rem;
+    align-items: flex-start;
+    justify-content: left;
   }
 `;
 
@@ -67,9 +68,9 @@ const NormalButton = styled.button`
 
   @media Screen and (max-width: 768px) {
     width: 7rem;
-    height: 2.4rem;
-    border-radius: .1rem;
-    font-size: .6rem;
+    height: 3.4rem;
+    font-size: .67rem;
+    border-radius: .6rem;
   }
   `;
 
@@ -90,9 +91,9 @@ const SecondaryButton = styled.button`
 
   @media Screen and (max-width: 768px) {
     width: 11rem;
-    height: 2.4rem;
-    border-radius: .1rem;
-    font-size: .6rem;
+    height: 3.4rem;
+    border-radius: .6rem;
+    font-size: .67rem;
     z-index: 2;
   }
   `;
