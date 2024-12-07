@@ -29,7 +29,7 @@ const Main = styled.main`
   overflow: hidden;
   @media Screen and (max-width: 1080px) {
     width: 100%;
-    padding: 0 2rem;
+    padding: 0;
     align-items: flex-start;
     justify-content: left;
   }
@@ -146,10 +146,10 @@ const Home = () => {
     <>
       <Imagem src={ Students }></Imagem>
       <Main>
-        <Bigger>Seja muito bem vindo !</Bigger>
+        <Bigger style={{paddingLeft: '2rem'}}>Seja muito bem vindo !</Bigger>
 
-        <Description>Seja bem-vindo ao curso de Licenciatura em Matemática, uma formação projetada para aqueles que desejam não apenas dominar os conceitos matemáticos, mas também desenvolver habilidades pedagógicas para ensinar essa ciência tão fundamental em escolas e instituições de ensino.</Description>
-        <div style={{display: 'flex', gap: '1.4rem'}}>
+        <Description style={{paddingLeft: '2rem'}}>Seja bem-vindo ao curso de Licenciatura em Matemática, uma formação projetada para aqueles que desejam não apenas dominar os conceitos matemáticos, mas também desenvolver habilidades pedagógicas para ensinar essa ciência tão fundamental em escolas e instituições de ensino.</Description>
+        <div style={{display: 'flex', gap: '1.4rem', paddingLeft: '2rem'}}>
           <NormalButton onClick={ irParaIfmg }>IFMG</NormalButton>
           <SecondaryButton onClick={ irParaAva }>AVA Presencial</SecondaryButton>
         </div>
