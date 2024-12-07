@@ -193,10 +193,6 @@ export default function App() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const toggleNav = () => {
-    setIsNavOnScreen((prev) => !prev); // Alterna o estado em telas menores
-  };
-
   // Função para abrir o overlay
   const handleShowOverlay = () => {
     setIsOverlayVisible(true);
@@ -223,11 +219,10 @@ export default function App() {
   }
   
   const login = () => {
-    toast.error("Usuário ou senha inválidos", {
-      position: window.innerWidth <= 1080 ? "bottom-center" : "top-right",
-    });
+    toast.error("Usuário ou senha inválidos");
     handleHideOverlay();
   };
+  
   return (   
     <Router>
       <ToastContainer />

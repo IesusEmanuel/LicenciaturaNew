@@ -44,10 +44,6 @@ const Normalbutton = styled.button`
     cursor: default;
     `;
 
-// const abrirIf = () => {
-//   window.open("https://meu.ifmg.edu.br/Corpore.Net/Login.aspx", "_blank");
-// }
-
 const Disciplina = ({ periodo, materia, desc}) => {
   return(
     <Container>

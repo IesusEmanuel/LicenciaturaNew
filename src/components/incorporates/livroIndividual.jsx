@@ -61,13 +61,6 @@ const baixarLivro = (link2) => {
   window.open(link2, "_blank");
 }
 
-// const baixarLivro = (link2) => {
-//   const a = document.createElement('a');
-//   a.href = link2; 
-//   a.download = ''; 
-//   a.click(); 
-// };
-
 const LivroIndividual = ({image, titulo, autor, link, link2}) => {
   return (
     <div style={{display: 'flex', gap: '1rem', marginTop: '2.3rem'}}>
